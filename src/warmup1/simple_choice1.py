@@ -1,7 +1,8 @@
 def simple_choice2(sunny):
     if (not sunny):
         return sunny
-    return sunny
+    else:
+        return not sunny
 
 
 def main():
