@@ -1,4 +1,6 @@
-def simple_choice2(sunny):
+#!/usr/bin/env python
+
+def simple_choice1(sunny):
     if (not sunny):
         return sunny
     else:
@@ -6,8 +8,8 @@ def simple_choice2(sunny):
 
 
 def main():
-    print(simple_choice2(True))
-    print(simple_choice2(False))
+    print(simple_choice1(True))
+    print(simple_choice1(False))
 
 
 if __name__ == "__main__":
