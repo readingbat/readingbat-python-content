@@ -1,6 +1,14 @@
 .idea
 .vscode
+.gradle
+target
+build
+out
 *.iml
+
+.classpath
+.settings
+.project
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
