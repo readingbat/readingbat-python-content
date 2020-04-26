@@ -1,4 +1,4 @@
-import com.github.readingbat.readingBatContent
+import com.github.readingbat.dsl.readingBatContent
 
 val content =
     readingBatContent {

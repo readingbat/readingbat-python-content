@@ -19,6 +19,7 @@ repositories {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     implementation "com.github.readingbat:readingbat-core:${readingBatVersion}"
+    implementation "io.github.microutils:kotlin-logging:${loggingVersion}"
 
     testImplementation('org.junit.jupiter:junit-jupiter:5.6.0')
 }
