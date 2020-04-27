@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 def front_back(s):
     if (len(s) < 2):

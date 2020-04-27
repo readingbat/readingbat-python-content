@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 
 def simple_choice1(sunny):
     if (not sunny):
