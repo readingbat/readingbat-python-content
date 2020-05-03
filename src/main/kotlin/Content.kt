@@ -1,5 +1,4 @@
-import com.github.readingbat.ReturnType.BooleanListType
-import com.github.readingbat.ReturnType.BooleanType
+import com.github.readingbat.ReturnType.*
 import com.github.readingbat.dsl.readingBatContent
 
 val content =
@@ -27,6 +26,16 @@ val content =
                 challenge("boolean_list") {
                     description = "This is a description of **boolean_list**"
                     returnType = BooleanListType
+                }
+
+                challenge("int_list") {
+                    description = "This is a description of **int_list**"
+                    returnType = IntListType
+                }
+
+                challenge("string_list") {
+                    description = "This is a description of **string_list**"
+                    returnType = StringListType
                 }
             }
 
