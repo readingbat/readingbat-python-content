@@ -7,6 +7,7 @@ val content =
 
         python {
             repoRoot = "https://github.com/readingbat/readingbat-python-content"
+            branchName = "dev"
 
             group("Warmup 1") {
                 packageName = "warmup1"
