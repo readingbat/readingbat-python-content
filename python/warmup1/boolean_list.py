@@ -6,8 +6,8 @@ def above_five(vals):
 
 
 def main():
-    print(above_five({5, 6}))
-    print(above_five({6}))
+    print(above_five([5, 6]))
+    print(above_five([6]))
 
 
 if __name__ == "__main__":
