@@ -1,3 +1,4 @@
+import com.github.readingbat.ReturnType.BooleanListType
 import com.github.readingbat.ReturnType.BooleanType
 import com.github.readingbat.dsl.readingBatContent
 
@@ -20,6 +21,11 @@ val content =
                     description = "This is a description of **simple_choice2**"
                     codingBatEquiv = "p173401"
                     returnType = BooleanType
+                }
+
+                challenge("boolean_list") {
+                    description = "This is a description of **boolean_list**"
+                    returnType = BooleanListType
                 }
             }
 
