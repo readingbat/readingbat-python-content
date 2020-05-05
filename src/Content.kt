@@ -8,6 +8,45 @@ val content =
       repoRoot = "https://github.com/readingbat/readingbat-python-content"
       branchName = "dev"
 
+      group("Expressions") {
+        packageName = "expressions"
+        description = "Collection of expressions"
+
+        challenge("ltexpr") {
+          description = """Determine if one value is less than another with the **<** operator."""
+          returnType = BooleanType
+        }
+
+        challenge("gtexpr") {
+          description = """Determine if one value is greater than another with the **>** operator."""
+          returnType = BooleanType
+        }
+
+        challenge("lteqexpr") {
+          description =
+            """Determine if one value is greater than or equal to another with the **<=** operator. Notice the "=" comes after the ">"."""
+          returnType = BooleanType
+        }
+
+        challenge("gteqexpr") {
+          description =
+            """Determine if one value is greater than or equal to another with the **>=** operator. *Notice the "=" comes after the ">".*"""
+          returnType = BooleanType
+        }
+
+        challenge("eqexpr") {
+          description = """Determine if two value are equal with the **==** operator. *Notice the 2 "=" characters.*"""
+          returnType = BooleanType
+        }
+
+        challenge("neqexpr") {
+          description = """Determine if two value are not equal with the **!=** operator."""
+          returnType = BooleanType
+        }
+
+      }
+
+
       group("Warmup 1") {
         packageName = "warmup1"
         description = "This is a description of Warmup 1"
