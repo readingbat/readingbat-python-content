@@ -8,41 +8,88 @@ val content =
       repoRoot = "https://github.com/readingbat/readingbat-python-content"
       branchName = "dev"
 
-      group("Expressions") {
-        packageName = "expressions"
-        description = "Collection of expressions"
+      group("Numeric Expressions") {
+        packageName = "numeric_expressions"
+        description = "Basic numeric expressions"
 
         challenge("ltexpr") {
-          description = """Determine if one value is less than another with the **<** operator."""
+          description = """Determine if one value is less than another with the "<" operator."""
           returnType = BooleanType
         }
 
         challenge("gtexpr") {
-          description = """Determine if one value is greater than another with the **>** operator."""
+          description = """Determine if one value is greater than another with the ">" operator."""
           returnType = BooleanType
         }
 
         challenge("lteqexpr") {
           description =
-            """Determine if one value is greater than or equal to another with the **<=** operator. Notice the "=" comes after the ">"."""
+            """Determine if one value is greater than or equal to another with the "<=" operator. *Notice the "=" comes after the "<".*"""
           returnType = BooleanType
         }
 
         challenge("gteqexpr") {
           description =
-            """Determine if one value is greater than or equal to another with the **>=** operator. *Notice the "=" comes after the ">".*"""
+            """Determine if one value is greater than or equal to another with the ">=" operator. *Notice the "=" comes after the ">".*"""
           returnType = BooleanType
         }
 
         challenge("eqexpr") {
-          description = """Determine if two value are equal with the **==** operator. *Notice the 2 "=" characters.*"""
+          description = """Determine if two value are equal with the "=="**" operator. *Notice the 2 "=" characters.*"""
           returnType = BooleanType
         }
 
         challenge("neqexpr") {
-          description = """Determine if two value are not equal with the **!=** operator."""
+          description = """Determine if two value are not equal with the "!=" operator."""
           returnType = BooleanType
         }
+
+      }
+
+      group("String Operations") {
+        packageName = "string_operations"
+        description = "Basic string operations"
+
+        challenge("len1") {
+          description = """**len()** returns the length of a string."""
+          returnType = IntType
+        }
+
+        challenge("len2") {
+          description = """**len()** returns the length of a string."""
+          returnType = IntType
+        }
+
+        challenge("len3") {
+          description = """**len()** returns the length of a string."""
+          returnType = IntType
+        }
+
+        challenge("slice1") {
+          description = """Remember the first character in a string is at index 0."""
+          returnType = StringType
+        }
+
+        challenge("slice2") {
+          description = """Remember the last character in a string is at index -1."""
+          returnType = StringType
+        }
+
+        challenge("slice3") {
+          description = """Remember the first character in a string is at index 0."""
+          returnType = StringType
+        }
+
+        challenge("slice4") {
+          description = """Remember a slice is inclusive of the starting index and exclusive of the ending index."""
+          returnType = StringType
+        }
+
+        challenge("slice5") {
+          description = """Remember a slice is inclusive of the starting index and exclusive of the ending index."""
+          returnType = StringType
+        }
+
 
       }
 
@@ -98,14 +145,6 @@ val content =
       group("String 2") {
         packageName = "string2"
         description = "This is a description of String 2"
-      }
-      group("Array 1") {
-        packageName = "array1"
-        description = "This is a description of Array 1"
-      }
-      group("Array 2") {
-        packageName = "array2"
-        description = "This is a description of Array 2"
       }
     }
   }
