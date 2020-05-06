@@ -55,19 +55,50 @@ val content =
 
         challenge("modulo1") {
           description =
-            """The "%" operator returns the remainder after dividing two numbers. 
-                See more details [here](https://blog.mattclemente.com/2019/07/12/modulus-operator-modulo-operation.html).
+            """
+            The "%" operator returns the remainder after dividing two numbers. 
+            See more details [here](https://blog.mattclemente.com/2019/07/12/modulus-operator-modulo-operation.html).
             """.trimIndent()
           returnType = IntType
         }
 
         challenge("modulo2") {
-          description = """%2 is an easy way of testing if a number is odd or even"""
+          description = """"% 2" is an easy way of testing if a number is odd or even"""
           returnType = BooleanType
         }
 
         challenge("modulo3") {
-          description = """%2 is an easy way of testing if a number is odd or even"""
+          description = """"% 2" is an easy way of testing if a number is odd or even""""
+          returnType = BooleanType
+        }
+
+        challenge("andor1") {
+          description = ""
+          returnType = BooleanType
+        }
+
+        challenge("andor2") {
+          description = ""
+          returnType = BooleanType
+        }
+
+        challenge("andor3") {
+          description = "The **not** operator flips a boolean value"
+          returnType = BooleanType
+        }
+
+        challenge("andor4") {
+          description = "The **not** operator flips a boolean value"
+          returnType = BooleanType
+        }
+
+        challenge("andor5") {
+          description = "Which order are the **and** and the **or** evaluated?"
+          returnType = BooleanType
+        }
+
+        challenge("andor6") {
+          description = "Parentheses override the ordinary order of evaluation"
           returnType = BooleanType
         }
       }
