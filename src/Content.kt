@@ -55,7 +55,9 @@ val content =
 
         challenge("modulo1") {
           description =
-            """The "%" operator returns the remainder after dividing two numbers. [See more details.](https://blog.mattclemente.com/2019/07/12/modulus-operator-modulo-operation.html)"""
+            """The "%" operator returns the remainder after dividing two numbers. 
+                See more details [here](https://blog.mattclemente.com/2019/07/12/modulus-operator-modulo-operation.html).
+            """.trimIndent()
           returnType = IntType
         }
 
