@@ -1,3 +1,4 @@
+import com.github.pambrose.common.util.GitHubRepo
 import com.github.readingbat.dsl.ReturnType.*
 import com.github.readingbat.dsl.readingBatContent
 
@@ -5,7 +6,7 @@ val content =
   readingBatContent {
 
     python {
-      repoRoot = "https://github.com/readingbat/readingbat-python-content"
+      repo = GitHubRepo("readingbat", "readingbat-python-content")
       branchName = "dev"
 
       group("Numeric Expressions") {
