@@ -3,7 +3,7 @@ import com.github.readingbat.ReadingBatServer
 import com.github.readingbat.dsl.ReturnType.*
 import com.github.readingbat.dsl.readingBatContent
 
-object PythonMain {
+object Main {
   @JvmStatic
   fun main(args: Array<String>) {
     ReadingBatServer.start(content)
