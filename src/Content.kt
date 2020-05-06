@@ -1,6 +1,14 @@
 import com.github.pambrose.common.util.GitHubRepo
+import com.github.readingbat.ReadingBatServer
 import com.github.readingbat.dsl.ReturnType.*
 import com.github.readingbat.dsl.readingBatContent
+
+object PythonMain {
+  @JvmStatic
+  fun main(args: Array<String>) {
+    ReadingBatServer.start(content)
+  }
+}
 
 val content =
   readingBatContent {
@@ -45,6 +53,21 @@ val content =
           returnType = BooleanType
         }
 
+        challenge("modulo1") {
+          description =
+            """The "%" operator returns the remainder after dividing two numbers. [See more details.](https://blog.mattclemente.com/2019/07/12/modulus-operator-modulo-operation.html)"""
+          returnType = IntType
+        }
+
+        challenge("modulo2") {
+          description = """%2 is an easy way of testing if a number is odd or even"""
+          returnType = BooleanType
+        }
+
+        challenge("modulo3") {
+          description = """%2 is an easy way of testing if a number is odd or even"""
+          returnType = BooleanType
+        }
       }
 
       group("String Operations") {
