@@ -6,7 +6,7 @@ val content =
 
     python {
       repoRoot = "https://github.com/readingbat/readingbat-python-content"
-      branchName = "master"
+      branchName = "dev"
 
       group("Numeric Expressions") {
         packageName = "numeric_expressions"
