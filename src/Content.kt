@@ -13,34 +13,34 @@ val content =
         packageName = "numeric_expressions"
         description = "Basic numeric expressions"
 
-        challenge("lt-expr") {
+        challenge("lt_expr") {
           description = """Determine if one value is less than another with the "<" operator."""
           returnType = BooleanType
         }
 
-        challenge("gt-expr") {
+        challenge("gt_expr") {
           description = """Determine if one value is greater than another with the ">" operator."""
           returnType = BooleanType
         }
 
-        challenge("lteq-expr") {
+        challenge("lteq_expr") {
           description =
             """Determine if one value is greater than or equal to another with the "<=" operator. *Notice the "=" comes after the "<".*"""
           returnType = BooleanType
         }
 
-        challenge("gteq-expr") {
+        challenge("gteq_expr") {
           description =
             """Determine if one value is greater than or equal to another with the ">=" operator. *Notice the "=" comes after the ">".*"""
           returnType = BooleanType
         }
 
-        challenge("eq-expr") {
+        challenge("eq_expr") {
           description = """Determine if two value are equal with the "=="**" operator. *Notice the 2 "=" characters.*"""
           returnType = BooleanType
         }
 
-        challenge("neq-expr") {
+        challenge("neq_expr") {
           description = """Determine if two value are not equal with the "!=" operator."""
           returnType = BooleanType
         }
