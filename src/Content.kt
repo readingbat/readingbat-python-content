@@ -3,13 +3,6 @@ import com.github.readingbat.ReadingBatServer
 import com.github.readingbat.dsl.ReturnType.*
 import com.github.readingbat.dsl.readingBatContent
 
-object Main {
-  @JvmStatic
-  fun main(args: Array<String>) {
-    ReadingBatServer.start(content)
-  }
-}
-
 val content =
   readingBatContent {
 
@@ -205,3 +198,10 @@ val content =
       }
     }
   }
+
+object Main {
+  @JvmStatic
+  fun main(args: Array<String>) {
+    ReadingBatServer.start(content)
+  }
+}
