@@ -173,27 +173,5 @@ val content =
           returnType = StringListType
         }
       }
-
-      group("Warmup 2") {
-        packageName = "warmup2"
-        description = "This is a description of Warmup 2"
-      }
-
-      group("Logic 1") {
-        packageName = "logic1"
-        description = "This is a description of Logic 1"
-      }
-      group("Logic 2") {
-        packageName = "logic2"
-        description = "This is a description of Logic 2"
-      }
-      group("String 1") {
-        packageName = "string1"
-        description = "This is a description of String 1"
-      }
-      group("String 2") {
-        packageName = "string2"
-        description = "This is a description of String 2"
-      }
     }
   }
