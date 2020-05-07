@@ -100,42 +100,42 @@ val content =
         description = "Basic string operations"
 
         challenge("len1") {
-          description = """**len()** returns the length of a string."""
+          description = "**len()** returns the length of a string."
           returnType = IntType
         }
 
         challenge("len2") {
-          description = """**len()** returns the length of a string."""
+          description = "**len()** returns the length of a string."
           returnType = IntType
         }
 
         challenge("len3") {
-          description = """**len()** returns the length of a string."""
+          description = "**len()** returns the length of a string."
           returnType = IntType
         }
 
         challenge("slice1") {
-          description = """Remember the first character in a string is at index 0."""
+          description = "Remember the first character in a string is at index 0."
           returnType = StringType
         }
 
         challenge("slice2") {
-          description = """Remember the last character in a string is at index -1."""
+          description = "Remember the last character in a string is at index -1."
           returnType = StringType
         }
 
         challenge("slice3") {
-          description = """Remember the first character in a string is at index 0."""
+          description = "Remember the first character in a string is at index 0."
           returnType = StringType
         }
 
         challenge("slice4") {
-          description = """Remember a slice is inclusive of the starting index and exclusive of the ending index."""
+          description = "Remember a slice is inclusive of the starting index and exclusive of the ending index."
           returnType = StringType
         }
 
         challenge("slice5") {
-          description = """Remember a slice is inclusive of the starting index and exclusive of the ending index."""
+          description = "Remember a slice is inclusive of the starting index and exclusive of the ending index."
           returnType = StringType
         }
 
