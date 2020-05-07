@@ -11,5 +11,5 @@ def main():
     print(strlen2("Golf", "Ball"))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
