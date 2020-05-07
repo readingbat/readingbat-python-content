@@ -45,6 +45,54 @@ val content =
           returnType = BooleanType
         }
 
+        challenge("modulo1") {
+          description =
+            """
+            The "%" operator returns the remainder after dividing two numbers. 
+            See more details [here](https://blog.mattclemente.com/2019/07/12/modulus-operator-modulo-operation.html).
+            """.trimIndent()
+          returnType = IntType
+        }
+
+        challenge("modulo2") {
+          description = """"% 2" is an easy way of testing if a number is odd or even"""
+          returnType = BooleanType
+        }
+
+        challenge("modulo3") {
+          description = """"% 2" is an easy way of testing if a number is odd or even""""
+          returnType = BooleanType
+        }
+
+        challenge("andor1") {
+          description = ""
+          returnType = BooleanType
+        }
+
+        challenge("andor2") {
+          description = ""
+          returnType = BooleanType
+        }
+
+        challenge("andor3") {
+          description = "The **not** operator flips a boolean value"
+          returnType = BooleanType
+        }
+
+        challenge("andor4") {
+          description = "The **not** operator flips a boolean value"
+          returnType = BooleanType
+        }
+
+        challenge("andor5") {
+          description = "Which order are the **and** and the **or** evaluated?"
+          returnType = BooleanType
+        }
+
+        challenge("andor6") {
+          description = "Parentheses override the ordinary order of evaluation"
+          returnType = BooleanType
+        }
       }
 
       group("String Operations") {
@@ -52,42 +100,42 @@ val content =
         description = "Basic string operations"
 
         challenge("len1") {
-          description = """**len()** returns the length of a string."""
+          description = "**len()** returns the length of a string."
           returnType = IntType
         }
 
         challenge("len2") {
-          description = """**len()** returns the length of a string."""
+          description = "**len()** returns the length of a string."
           returnType = IntType
         }
 
         challenge("len3") {
-          description = """**len()** returns the length of a string."""
+          description = "**len()** returns the length of a string."
           returnType = IntType
         }
 
         challenge("slice1") {
-          description = """Remember the first character in a string is at index 0."""
+          description = "Remember the first character in a string is at index 0."
           returnType = StringType
         }
 
         challenge("slice2") {
-          description = """Remember the last character in a string is at index -1."""
+          description = "Remember the last character in a string is at index -1."
           returnType = StringType
         }
 
         challenge("slice3") {
-          description = """Remember the first character in a string is at index 0."""
+          description = "Remember the first character in a string is at index 0."
           returnType = StringType
         }
 
         challenge("slice4") {
-          description = """Remember a slice is inclusive of the starting index and exclusive of the ending index."""
+          description = "Remember a slice is inclusive of the starting index and exclusive of the ending index."
           returnType = StringType
         }
 
         challenge("slice5") {
-          description = """Remember a slice is inclusive of the starting index and exclusive of the ending index."""
+          description = "Remember a slice is inclusive of the starting index and exclusive of the ending index."
           returnType = StringType
         }
 
@@ -124,28 +172,6 @@ val content =
           description = "This is a description of **string_list**"
           returnType = StringListType
         }
-      }
-
-      group("Warmup 2") {
-        packageName = "warmup2"
-        description = "This is a description of Warmup 2"
-      }
-
-      group("Logic 1") {
-        packageName = "logic1"
-        description = "This is a description of Logic 1"
-      }
-      group("Logic 2") {
-        packageName = "logic2"
-        description = "This is a description of Logic 2"
-      }
-      group("String 1") {
-        packageName = "string1"
-        description = "This is a description of String 1"
-      }
-      group("String 2") {
-        packageName = "string2"
-        description = "This is a description of String 2"
       }
     }
   }
