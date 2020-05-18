@@ -14,5 +14,11 @@ uberjar:
 uber: uberjar
 	java -jar build/libs/server.jar
 
+cc:
+	./gradlew build --continuous -x test
+
+run:
+	./gradlew run
+
 versioncheck:
 	./gradlew dependencyUpdates
