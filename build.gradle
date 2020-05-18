@@ -27,13 +27,11 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation "com.github.readingbat:readingbat-core:$readingbat_version"
+    implementation "com.github.pambrose.common-utils:core-utils:$utils_version"
+    implementation "io.github.microutils:kotlin-logging:$logging_version"
 
-    implementation "com.github.readingbat:readingbat-core:${readingbat_version}"
-    implementation "com.github.pambrose.common-utils:core-utils:${utils_version}"
-
-    implementation "io.github.microutils:kotlin-logging:${logging_version}"
-
-    testImplementation('org.junit.jupiter:junit-jupiter:5.6.0')
+    testImplementation "org.junit.jupiter:junit-jupiter:$junit_version"
 }
 
 sourceSets {
