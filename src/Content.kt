@@ -7,40 +7,41 @@ val content =
 
     python {
       repo = GitHubRepo("readingbat", "readingbat-python-content")
+      //repo = FileSystemSource("./")
       branchName = "master"
 
       group("Numeric Expressions") {
         packageName = "numeric_expressions"
         description = "Basic numeric expressions"
 
-        challenge("lt_expr") {
+        challenge("less_than") {
           description = """Determine if one value is less than another with the "<" operator."""
           returnType = BooleanType
         }
 
-        challenge("gt_expr") {
+        challenge("greater_than") {
           description = """Determine if one value is greater than another with the ">" operator."""
           returnType = BooleanType
         }
 
-        challenge("lteq_expr") {
+        challenge("less_than_or_equal") {
           description =
             """Determine if one value is greater than or equal to another with the "<=" operator. *Notice the "=" comes after the "<".*"""
           returnType = BooleanType
         }
 
-        challenge("gteq_expr") {
+        challenge("greater_than_or_equal") {
           description =
             """Determine if one value is greater than or equal to another with the ">=" operator. *Notice the "=" comes after the ">".*"""
           returnType = BooleanType
         }
 
-        challenge("eq_expr") {
+        challenge("equal") {
           description = """Determine if two value are equal with the "=="**" operator. *Notice the 2 "=" characters.*"""
           returnType = BooleanType
         }
 
-        challenge("neq_expr") {
+        challenge("not_equal") {
           description = """Determine if two value are not equal with the "!=" operator."""
           returnType = BooleanType
         }
@@ -90,7 +91,12 @@ val content =
         }
 
         challenge("andor6") {
-          description = "Parentheses override the ordinary order of evaluation"
+          description = "Parentheses override the order of evaluation"
+          returnType = BooleanType
+        }
+
+        challenge("andor7") {
+          description = "Which order are the **and** and the **or** evaluated?"
           returnType = BooleanType
         }
       }
