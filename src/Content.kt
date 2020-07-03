@@ -1,5 +1,4 @@
 import com.github.pambrose.common.util.FileSystemSource
-import com.github.pambrose.common.util.GitHubRepo
 import com.github.readingbat.dsl.ReturnType.*
 import com.github.readingbat.dsl.readingBatContent
 
@@ -7,8 +6,8 @@ val content =
   readingBatContent {
 
     python {
-      repo = GitHubRepo("readingbat", "readingbat-python-content")
-      //repo = FileSystemSource("./")
+      //repo = GitHubRepo("readingbat", "readingbat-python-content")
+      repo = FileSystemSource("./")
       branchName = "master"
 
       group("Boolean Expressions") {
@@ -134,6 +133,11 @@ val content =
         challenge("strlen3") {
           description = "**len()** returns the length of a string."
           returnType = IntType
+        }
+
+        challenge("string_in") {
+          description = "**in** returns true if a string is found in a different string."
+          returnType = BooleanType
         }
 
         challenge("slice1") {
