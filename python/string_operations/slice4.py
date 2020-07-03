@@ -4,12 +4,12 @@ def slice4(s):
 
 
 def main():
-    print(slice4("Car"))
-    print(slice4("Truck"))
-    print(slice4("556843"))
-    print(slice4("Elephant"))
-    print(slice4("Roses"))
+    print(slice4('Car'))
+    print(slice4('Truck'))
+    print(slice4('556843'))
+    print(slice4('Elephant'))
+    print(slice4('Roses'))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

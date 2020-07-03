@@ -4,12 +4,12 @@ def strlen2(s, t):
 
 
 def main():
-    print(strlen2("Bike", "grass"))
-    print(strlen2("", ""))
-    print(strlen2("56", ""))
-    print(strlen2("Cat", "Dog"))
-    print(strlen2("Golf", "Ball"))
+    print(strlen2('Bike', 'grass'))
+    print(strlen2('', ''))
+    print(strlen2('56', ''))
+    print(strlen2('Cat', 'Dog'))
+    print(strlen2('Golf', 'Ball'))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

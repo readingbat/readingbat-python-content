@@ -6,12 +6,12 @@ def slice3(s):
 
 
 def main():
-    print(slice3("Car"))
-    print(slice3("Truck"))
-    print(slice3("556843"))
-    print(slice3("Elephant"))
-    print(slice3("Roses"))
+    print(slice3('Car'))
+    print(slice3('Truck'))
+    print(slice3('556843'))
+    print(slice3('Elephant'))
+    print(slice3('Roses'))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
