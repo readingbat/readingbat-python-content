@@ -105,17 +105,17 @@ val content =
         packageName = "string_operations"
         description = "Basic string operations"
 
-        challenge("len1") {
+        challenge("strlen1") {
           description = "**len()** returns the length of a string."
           returnType = IntType
         }
 
-        challenge("len2") {
+        challenge("strlen2") {
           description = "**len()** returns the length of a string."
           returnType = IntType
         }
 
-        challenge("len3") {
+        challenge("strlen3") {
           description = "**len()** returns the length of a string."
           returnType = IntType
         }
