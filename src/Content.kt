@@ -108,6 +108,16 @@ val content =
         packageName = "string_operations"
         description = "Basic string operations"
 
+        challenge("combine1") {
+          description = "Merge the first and last characters of each string."
+          returnType = StringType
+        }
+
+        challenge("combine2") {
+          description = "Return a substring of the second character to the end of each string."
+          returnType = StringType
+        }
+
         challenge("concat1") {
           description = "Merge two strings."
           returnType = StringType
