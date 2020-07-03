@@ -11,5 +11,5 @@ def main():
     print(not_equal(6, 4))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

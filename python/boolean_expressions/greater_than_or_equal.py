@@ -11,5 +11,5 @@ def main():
     print(greater_than_or_equal(7, 2))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

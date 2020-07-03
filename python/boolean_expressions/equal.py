@@ -11,5 +11,5 @@ def main():
     print(equal(7, 7))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

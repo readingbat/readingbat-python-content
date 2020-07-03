@@ -11,5 +11,5 @@ def main():
     print(modulo1(8, 1))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

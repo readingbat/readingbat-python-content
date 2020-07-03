@@ -11,5 +11,5 @@ def main():
     print(is_even(8))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

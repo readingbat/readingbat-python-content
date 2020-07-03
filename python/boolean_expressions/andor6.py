@@ -14,5 +14,5 @@ def main():
     print(andor6(False, False, False))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

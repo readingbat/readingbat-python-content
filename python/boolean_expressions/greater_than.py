@@ -11,5 +11,5 @@ def main():
     print(greater_than(11, 28))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
