@@ -8,7 +8,7 @@ def main():
     print(concat1("5", "8"))
     print(concat1("Snow", "ball"))
     print(concat1("Rain", "boots"))
-
+    print(concat1("Reading", "bat"))
 
 if __name__ == "__main__":
     main()
