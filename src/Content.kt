@@ -108,17 +108,17 @@ val content =
 
         challenge("concat1") {
           description = "Merge two strings."
-          returnType = IntType
+          returnType = StringType
         }
 
         challenge("concat2") {
           description = "Merge three strings."
-          returnType = IntType
+          returnType = StringType
         }
 
         challenge("concat3") {
           description = "Print a string a certain number of times."
-          returnType = IntType
+          returnType = StringType
         }
 
         challenge("strlen1") {
