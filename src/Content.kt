@@ -105,6 +105,11 @@ val content =
         packageName = "string_operations"
         description = "Basic string operations"
 
+        challenge("concat1") {
+          description = "Merge two strings."
+          returnType = IntType
+        }
+
         challenge("strlen1") {
           description = "**len()** returns the length of a string."
           returnType = IntType
