@@ -1,4 +1,3 @@
-import com.github.pambrose.common.util.FileSystemSource
 import com.github.pambrose.common.util.GitHubRepo
 import com.github.readingbat.dsl.ReturnType.*
 import com.github.readingbat.dsl.readingBatContent
@@ -7,10 +6,13 @@ val content =
   readingBatContent {
 
     python {
+      /*
       repo = if (this@readingBatContent.production)
         GitHubRepo("readingbat", "readingbat-python-content")
       else
         FileSystemSource("./")
+       */
+      repo = GitHubRepo("readingbat", "readingbat-python-content")
       branchName = "master"
 
       group("Boolean Expressions") {
