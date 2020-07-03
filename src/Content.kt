@@ -10,58 +10,58 @@ val content =
       //repo = FileSystemSource("./")
       branchName = "master"
 
-      group("Numeric Expressions") {
-        packageName = "numeric_expressions"
-        description = "Basic numeric expressions"
+      group("Boolean Expressions") {
+        packageName = "boolean_expressions"
+        description = "Basic boolean expressions"
 
         challenge("less_than") {
-          description = """Determine if one value is less than another with the "<" operator."""
+          description = "Determine if one value is less than another with the **<** operator."
           returnType = BooleanType
         }
 
         challenge("greater_than") {
-          description = """Determine if one value is greater than another with the ">" operator."""
+          description = "Determine if one value is greater than another with the **>** operator."
           returnType = BooleanType
         }
 
         challenge("less_than_or_equal") {
           description =
-            """Determine if one value is greater than or equal to another with the "<=" operator. *Notice the "=" comes after the "<".*"""
+            """Determine if one value is greater than or equal to another with the **<=** operator. *Notice the "=" comes after the "<".*"""
           returnType = BooleanType
         }
 
         challenge("greater_than_or_equal") {
           description =
-            """Determine if one value is greater than or equal to another with the ">=" operator. *Notice the "=" comes after the ">".*"""
+            """Determine if one value is greater than or equal to another with the **>=** operator. *Notice the "=" comes after the ">".*"""
           returnType = BooleanType
         }
 
         challenge("equal") {
-          description = """Determine if two value are equal with the "=="**" operator. *Notice the 2 "=" characters.*"""
+          description = """Determine if two value are equal with the **==** operator. *Notice the 2 "=" characters.*"""
           returnType = BooleanType
         }
 
         challenge("not_equal") {
-          description = """Determine if two value are not equal with the "!=" operator."""
+          description = "Determine if two value are not equal with the **!=** operator."
           returnType = BooleanType
         }
 
         challenge("modulo1") {
           description =
             """
-            The "%" operator returns the remainder after dividing two numbers. 
+            The **%** operator returns the remainder after dividing two numbers. 
             See more details [here](https://blog.mattclemente.com/2019/07/12/modulus-operator-modulo-operation.html).
             """.trimIndent()
           returnType = IntType
         }
 
         challenge("modulo2") {
-          description = """"% 2" is an easy way of testing if a number is odd or even"""
+          description = """**%2** is an easy way of testing if a number is odd or even"""
           returnType = BooleanType
         }
 
         challenge("modulo3") {
-          description = """"% 2" is an easy way of testing if a number is odd or even""""
+          description = "**%2** is an easy way of testing if a number is odd or even"
           returnType = BooleanType
         }
 
