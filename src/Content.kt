@@ -1,4 +1,5 @@
 import com.github.pambrose.common.util.FileSystemSource
+import com.github.pambrose.common.util.GitHubRepo
 import com.github.readingbat.dsl.ReturnType.*
 import com.github.readingbat.dsl.readingBatContent
 
@@ -6,8 +7,10 @@ val content =
   readingBatContent {
 
     python {
-      //repo = GitHubRepo("readingbat", "readingbat-python-content")
-      repo = FileSystemSource("./")
+      repo = if (this@readingBatContent.production) GitHubRepo(
+        "readingbat",
+        "readingbat-python-content"
+      ) else FileSystemSource("./")
       branchName = "master"
 
       group("Boolean Expressions") {
@@ -135,8 +138,8 @@ val content =
           returnType = IntType
         }
 
-        challenge("string_in") {
-          description = "**in** returns True if a string1 is found in string2."
+        challenge("in_oper") {
+          description = "The **in** operator returns True if a string1 is found in string2."
           returnType = BooleanType
         }
 
@@ -164,8 +167,6 @@ val content =
           description = "Remember a slice is inclusive of the starting index and exclusive of the ending index."
           returnType = StringType
         }
-
-
       }
 
       group("Warmup 1") {
