@@ -136,7 +136,7 @@ val content =
         }
 
         challenge("string_in") {
-          description = "**in** returns true if a string is found in a different string."
+          description = "**in** returns True if a string1 is found in string2."
           returnType = BooleanType
         }
 

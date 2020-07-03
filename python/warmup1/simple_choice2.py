@@ -12,5 +12,5 @@ def main():
     print(simple_choice2(False, False))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

@@ -8,10 +8,10 @@ def front_back(s):
 
 
 def main():
-    print(front_back("This is a test"))
-    print(front_back(""))
-    print(front_back("t"))
+    print(front_back('This is a test'))
+    print(front_back(''))
+    print(front_back('t'))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
