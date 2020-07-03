@@ -111,6 +111,16 @@ val content =
           returnType = IntType
         }
 
+        challenge("concat2") {
+          description = "Merge three strings."
+          returnType = IntType
+        }
+
+        challenge("concat3") {
+          description = "Print a string a certain number of times."
+          returnType = IntType
+        }
+
         challenge("strlen1") {
           description = "**len()** returns the length of a string."
           returnType = IntType
