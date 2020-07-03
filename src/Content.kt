@@ -1,3 +1,4 @@
+import com.github.pambrose.common.util.FileSystemSource
 import com.github.pambrose.common.util.GitHubRepo
 import com.github.readingbat.dsl.ReturnType.*
 import com.github.readingbat.dsl.readingBatContent
