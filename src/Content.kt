@@ -7,10 +7,10 @@ val content =
   readingBatContent {
 
     python {
-      repo = if (this@readingBatContent.production) GitHubRepo(
-        "readingbat",
-        "readingbat-python-content"
-      ) else FileSystemSource("./")
+      repo = if (this@readingBatContent.production)
+        GitHubRepo("readingbat", "readingbat-python-content")
+      else
+        FileSystemSource("./")
       branchName = "master"
 
       group("Boolean Expressions") {
