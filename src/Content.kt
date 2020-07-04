@@ -158,6 +158,11 @@ val content =
           returnType = BooleanType
         }
 
+        challenge("ends_with") {
+          description = "The **endswith()** function returns True if a string ends with a specified substring."
+          returnType = BooleanType
+        }
+
         challenge("slice1") {
           description = "Remember the first character in a string is at index 0."
           returnType = StringType
