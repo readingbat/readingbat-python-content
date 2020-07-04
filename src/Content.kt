@@ -1,18 +1,16 @@
+import com.github.pambrose.common.util.FileSystemSource
 import com.github.pambrose.common.util.GitHubRepo
 import com.github.readingbat.dsl.ReturnType.*
+import com.github.readingbat.dsl.isProduction
 import com.github.readingbat.dsl.readingBatContent
 
 val content =
   readingBatContent {
 
     python {
-      /*
-      repo = if (this@readingBatContent.production)
-        GitHubRepo("readingbat", "readingbat-python-content")
-      else
-        FileSystemSource("./")
-       */
-      repo = GitHubRepo("readingbat", "readingbat-python-content")
+
+      repo = if (isProduction()) GitHubRepo("readingbat", "readingbat-python-content") else FileSystemSource("./")
+      //repo = GitHubRepo("readingbat", "readingbat-python-content")
       branchName = "master"
 
       group("Boolean Expressions") {
@@ -151,7 +149,12 @@ val content =
         }
 
         challenge("in_oper") {
-          description = "The **in** operator returns True if a string1 is found in string2."
+          description = "The **in** operator returns True if a specified substring is found in a string."
+          returnType = BooleanType
+        }
+
+        challenge("starts_with") {
+          description = "The **startswith()** function returns True if a string starts with a specified substring."
           returnType = BooleanType
         }
 
