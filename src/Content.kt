@@ -6,11 +6,11 @@ import com.github.readingbat.dsl.readingBatContent
 
 val content =
   readingBatContent {
+    cacheChallenges = !isProduction()
 
     python {
 
       repo = if (isProduction()) GitHubRepo("readingbat", "readingbat-python-content") else FileSystemSource("./")
-      //repo = GitHubRepo("readingbat", "readingbat-python-content")
       branchName = "master"
 
       group("Boolean Expressions") {
