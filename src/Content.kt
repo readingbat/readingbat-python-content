@@ -6,7 +6,6 @@ import com.github.readingbat.dsl.readingBatContent
 
 val content =
   readingBatContent {
-    cacheChallenges = !isProduction()
 
     python {
 
