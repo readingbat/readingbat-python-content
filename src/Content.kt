@@ -6,11 +6,10 @@ import com.github.readingbat.dsl.readingBatContent
 
 val content =
   readingBatContent {
+    repo = if (isProduction()) GitHubRepo("readingbat", "readingbat-python-content") else FileSystemSource("./")
+    branchName = "master"
 
     python {
-
-      repo = if (isProduction()) GitHubRepo("readingbat", "readingbat-python-content") else FileSystemSource("./")
-      branchName = "master"
 
       group("Boolean Expressions") {
         packageName = "boolean_expressions"
