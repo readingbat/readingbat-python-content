@@ -107,7 +107,7 @@ val content =
         description = "Basic string operations"
 
         challenge("goodbye_name") {
-          description = "Returns a string saying goodbye to a name."
+          description = "Say goodbye to a name."
           returnType = StringType
         }
 
