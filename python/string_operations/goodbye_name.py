@@ -1,5 +1,5 @@
 def goodbye_name(name):
-  return "Goodbye " + name + "!"
+  return 'Goodbye ' + name + '!'
 
 def main():
     print(goodbye_name('World'))
