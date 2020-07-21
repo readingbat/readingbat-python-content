@@ -62,7 +62,7 @@ val content =
         }
 
         challenge("modulo3") {
-          description = "**%2** is an easy way of testing if a number is odd or even"
+          description = "`%2` is an easy way of testing if a number is odd or even"
           returnType = BooleanType
         }
 
