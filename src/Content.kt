@@ -27,13 +27,13 @@ val content =
 
         challenge("less_than_or_equal") {
           description =
-            """Determine if one value is greater than or equal to another with the **<=** operator. *Notice the "=" comes after the "<".*"""
+                  """Determine if one value is greater than or equal to another with the **<=** operator. *Notice the "=" comes after the "<".*"""
           returnType = BooleanType
         }
 
         challenge("greater_than_or_equal") {
           description =
-            """Determine if one value is greater than or equal to another with the **>=** operator. *Notice the "=" comes after the ">".*"""
+                  """Determine if one value is greater than or equal to another with the **>=** operator. *Notice the "=" comes after the ">".*"""
           returnType = BooleanType
         }
 
@@ -49,7 +49,7 @@ val content =
 
         challenge("modulo1") {
           description =
-            """
+                  """
             The **%** operator returns the remainder after dividing two numbers. 
             See more details [here](https://blog.mattclemente.com/2019/07/12/modulus-operator-modulo-operation.html).
             """.trimIndent()
