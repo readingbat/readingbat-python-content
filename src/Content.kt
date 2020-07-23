@@ -38,7 +38,8 @@ val content =
         }
 
         challenge("equal") {
-          description = """Determine if two value are equal with the "**==**" operator. *Notice the 2 "=" characters.*"""
+          description =
+            """Determine if two value are equal with the "**==**" operator. *Notice the 2 "=" characters.*"""
           returnType = BooleanType
         }
 
@@ -117,7 +118,7 @@ val content =
         }
 
         challenge("combine2") {
-          description = "Return a substring of the second character to the end of each string."
+          description = """*"s[1]"* is the 2nd character of a string"""
           returnType = StringType
         }
 
