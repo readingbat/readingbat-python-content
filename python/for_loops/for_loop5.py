@@ -8,9 +8,8 @@ def for_loop5(str, x, y):
 
 def main():
     print(for_loop5('athenian', 'e', 2))
-    print(for_loop5('apples', 'ap', 1))
+    print(for_loop5('apples', 'p', 1))
     print(for_loop5('hello', 'a', 3))
-    print(for_loop5('alphabet', 'al', 0))
     print(for_loop5('aa', 'a', 1))
 
 if __name__ == '__main__':
