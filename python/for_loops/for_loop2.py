@@ -1,18 +1,18 @@
-def for_loop2(x, y):
+def for_loop2(x):
     z = 0
-    for i in range(x):
-        z += 1
-    return y - z
+    for i in x:
+        if i == 'a':
+            z += 1
+    return z
 
 
 def main():
-    print(for_loop2(5, 7))
-    print(for_loop2(2, 5))
-    print(for_loop2(1, 8))
-    print(for_loop2(15, 1))
-    print(for_loop2(150, 0))
-    print(for_loop2(10, 10))
-
+    print(for_loop2('athenian'))
+    print(for_loop2('apples'))
+    print(for_loop2('hello'))
+    print(for_loop2(''))
+    print(for_loop2(' '))
+    print(for_loop2('alphabet'))
 
 if __name__ == '__main__':
     main()
