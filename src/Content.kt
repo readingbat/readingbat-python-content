@@ -118,7 +118,7 @@ val content =
         }
 
         challenge("combine2") {
-          description = """*"s[1]"* is the 2nd character of a string"""
+          description = "Remember: the 2nd character in a string is at index 1."
           returnType = StringType
         }
 
@@ -168,12 +168,12 @@ val content =
         }
 
         challenge("slice1") {
-          description = "Remember the first character in a string is at index 0."
+          description = "Remember: the first character in a string is at index 0."
           returnType = StringType
         }
 
         challenge("slice2") {
-          description = "Remember the last character in a string is at index -1."
+          description = "Remember: the last character in a string is at index -1."
           returnType = StringType
         }
 
