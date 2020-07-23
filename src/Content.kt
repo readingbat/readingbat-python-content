@@ -6,6 +6,7 @@ import com.github.readingbat.dsl.readingBatContent
 
 val content =
   readingBatContent {
+    println("I am here: ${isProduction()}")
     repo = if (isProduction()) GitHubRepo("readingbat", "readingbat-python-content") else FileSystemSource("./")
     branchName = "master"
 
