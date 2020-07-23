@@ -1,9 +1,8 @@
 def combine1(s1, s2):
-    s1 = s1.substring(0) + s1.substring(s1.length()-1)
-    s2 = s2.substring(0) + s2.substring(s2.length()-1)
-    result = s1 + s2
+    s3 = s1[0] + s1[-1]
+    s4 = s2[0] + s2[-1]
+    result = s3 + s4
     return result
-
 
 def main():
     print(combine1('Car', 'wash'))
