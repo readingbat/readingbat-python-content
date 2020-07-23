@@ -256,6 +256,11 @@ val content =
           description = ""
           returnType = IntType
         }
+
+        challenge("for_loop6") {
+          description = ""
+          returnType = IntType
+        }
       }
     }
   }

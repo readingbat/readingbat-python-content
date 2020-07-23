@@ -1,9 +1,9 @@
 def for_loop2(x):
-    z = 0
+    result = 0
     for i in x:
         if i == 'a':
-            z += 1
-    return z
+            result += 1
+    return result
 
 
 def main():
