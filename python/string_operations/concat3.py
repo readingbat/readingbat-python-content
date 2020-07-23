@@ -1,20 +1,20 @@
-def concat1(t, s):
+def concat3(t, s):
     result = ''
-    for i in t:
+    for i in range(t):
         result+=s
     return result
 
 
 def main():
-    print(concat1(3, 'Car'))
-    print(concat1(1, 'Hello'))
-    print(concat1(9, '5'))
-    print(concat1(5, 'ree'))
-    print(concat1(3, 'Hi'))
-    print(concat1(4, 'bat'))
-    print(concat1(5, ''))
-    print(concat1(4, ' '))
-    print(concat1(0, 'abc'))
+    print(concat3(3, 'Car'))
+    print(concat3(1, 'Hello'))
+    print(concat3(9, '5'))
+    print(concat3(5, 'ree'))
+    print(concat3(3, 'Hi'))
+    print(concat3(4, 'bat'))
+    print(concat3(5, ''))
+    print(concat3(4, ' '))
+    print(concat3(0, 'abc'))
 
 if __name__ == '__main__':
     main()

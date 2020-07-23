@@ -1,13 +1,13 @@
 def combine2(s1, s2):
-    s1 = s1[1]
-    s2 = s2[1]
-    result = s1 + s2
+    s3 = s1[1]
+    s4 = s2[1]
+    result = s3 + s4
     return result
 
 
 def main():
     print(combine2('Car', 'wash'))
-    print(combine2(' Hello', '  world'))
+    print(combine2(' Hello', ' world'))
     print(combine2('55', '88'))
     print(combine2('Snow', 'ball'))
     print(combine2('Rain', 'boots'))

@@ -226,6 +226,11 @@ val content =
           description = "This is a description of **string_list**"
           returnType = StringListType
         }
+
+        challenge("x_and_y") {
+          description = "This is a description of **x and y**"
+          returnType = IntType
+        }
       }
       group("For Loops") {
         packageName = "for_loops"
@@ -257,6 +262,25 @@ val content =
         }
 
         challenge("for_loop6") {
+          description = ""
+          returnType = IntType
+        }
+      }
+      group("Lists") {
+        packageName = "lists"
+        description = "This is a description of Lists"
+
+        challenge("list3") {
+          description = ""
+          returnType = IntType
+        }
+
+        challenge("list4") {
+          description = ""
+          returnType = IntType
+        }
+
+        challenge("list5") {
           description = ""
           returnType = IntType
         }
