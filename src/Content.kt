@@ -214,7 +214,6 @@ val content =
         }
 
         challenge("boolean_list") {
-          description = "This is a description of **boolean_list**"
           returnType = BooleanListType
         }
 
