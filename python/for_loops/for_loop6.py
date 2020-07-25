@@ -13,6 +13,8 @@ def main():
     print(for_loop6('hello', 'a'))
     print(for_loop6('alphabet', 'al'))
     print(for_loop6('aaaaa', 'aa'))
+    print(for_loop6('computational thinking', 'in'))
+    print(for_loop6('hello goodbye hello', 'hello'))
 
 
 if __name__ == '__main__':
