@@ -1,7 +1,8 @@
 def for_loop6(str, x):
     result = 0
     xl = len(x)
-    for i in range(len(str) - xl + 1):
+    strl = len(str)
+    for i in range(strl - xl + 1):
         if str[i: i + xl] == x:
             result += 1
     return result
