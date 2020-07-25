@@ -16,5 +16,6 @@ def main():
     print(combine2('Hi', 'there'))
     print(combine2('  ', '  '))
 
+
 if __name__ == '__main__':
     main()

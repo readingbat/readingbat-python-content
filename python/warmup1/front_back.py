@@ -1,4 +1,3 @@
-
 def front_back(s):
     if (len(s) < 2):
         return s

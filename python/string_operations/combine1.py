@@ -4,6 +4,7 @@ def combine1(s1, s2):
     result = s3 + s4
     return result
 
+
 def main():
     print(combine1('Car', 'wash'))
     print(combine1('Hello', ' world'))
@@ -14,6 +15,7 @@ def main():
     print(combine1('AAA', 'Hi'))
     print(combine1('Hi', 'there'))
     print(combine1(' ', ' '))
+
 
 if __name__ == '__main__':
     main()

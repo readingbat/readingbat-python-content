@@ -10,5 +10,6 @@ def main():
     print(slice5('Elephant'))
     print(slice5('Violets'))
 
+
 if __name__ == '__main__':
     main()

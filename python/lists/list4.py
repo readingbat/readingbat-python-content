@@ -13,5 +13,6 @@ def main():
     print(list4(['Computational', 'thinking'], 1))
     print(list4(['a', 'A', 'A'], 1))
 
+
 if __name__ == '__main__':
     main()

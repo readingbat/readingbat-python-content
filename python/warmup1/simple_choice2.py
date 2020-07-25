@@ -1,4 +1,3 @@
-
 def simple_choice2(sunny, raining):
     if (sunny or raining):
         return sunny

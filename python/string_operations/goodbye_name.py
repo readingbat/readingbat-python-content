@@ -1,5 +1,6 @@
 def goodbye_name(name):
-  return 'Goodbye ' + name + '!'
+    return 'Goodbye ' + name + '!'
+
 
 def main():
     print(goodbye_name('person'))
@@ -10,6 +11,7 @@ def main():
     print(goodbye_name('school'))
     print(goodbye_name(''))
     print(goodbye_name('Matt'))
+
 
 if __name__ == '__main__':
     main()

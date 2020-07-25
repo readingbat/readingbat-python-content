@@ -1,7 +1,7 @@
 def concat3(t, s):
     result = ''
     for i in range(t):
-        result+=s
+        result += s
     return result
 
 
@@ -15,6 +15,7 @@ def main():
     print(concat3(5, ''))
     print(concat3(4, ' '))
     print(concat3(0, 'abc'))
+
 
 if __name__ == '__main__':
     main()

@@ -14,5 +14,6 @@ def main():
     print(for_loop2(' '))
     print(for_loop2('alphabet'))
 
+
 if __name__ == '__main__':
     main()

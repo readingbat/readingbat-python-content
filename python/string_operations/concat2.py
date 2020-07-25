@@ -14,5 +14,6 @@ def main():
     print(concat2('', '', ''))
     print(concat2(' ', ' ', ' '))
 
+
 if __name__ == '__main__':
     main()
