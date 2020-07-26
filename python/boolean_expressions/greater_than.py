@@ -1,3 +1,5 @@
+# @desc Determine if one value is greater than another with the **>** operator.
+
 def greater_than(val1, val2):
     result = val1 > val2
     return result

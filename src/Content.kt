@@ -237,32 +237,26 @@ val content =
         description = "This is a description of For Loops"
 
         challenge("for_loop1") {
-          description = ""
           returnType = IntType
         }
 
         challenge("for_loop2") {
-          description = ""
           returnType = IntType
         }
 
         challenge("for_loop3") {
-          description = ""
           returnType = IntType
         }
 
         challenge("for_loop4") {
-          description = ""
           returnType = IntType
         }
 
         challenge("for_loop5") {
-          description = ""
           returnType = IntType
         }
 
         challenge("for_loop6") {
-          description = ""
           returnType = IntType
         }
       }
@@ -271,17 +265,17 @@ val content =
         description = "This is a description of Lists"
 
         challenge("list3") {
-          description = ""
+          description = "This is a description of Lists"
           returnType = IntType
         }
 
         challenge("list4") {
-          description = ""
+          description = "This is a description of Lists"
           returnType = IntType
         }
 
         challenge("list5") {
-          description = ""
+          description = "This is a description of Lists"
           returnType = IntType
         }
       }

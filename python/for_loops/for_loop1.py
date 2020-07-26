@@ -1,3 +1,5 @@
+# @desc This is a description of for loop 1
+
 def for_loop1(x):
     result = 0
     for i in x:

@@ -1,3 +1,5 @@
+# @desc **% 2**" is an easy way of testing if a number is odd or even.
+
 def is_even(num):
     result = num % 2
     return result == 0

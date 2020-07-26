@@ -1,3 +1,5 @@
+# @desc Determine if one value is greater than or equal to another with the **<=** operator. *Notice the "=" comes after the "<".
+
 def less_than_or_equal(val1, val2):
     result = val1 <= val2
     return result

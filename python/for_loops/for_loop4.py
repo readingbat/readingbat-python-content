@@ -1,3 +1,5 @@
+# @desc This is a description of for loop 4
+
 def for_loop4(str, x):
     result = 0
     for i in str:

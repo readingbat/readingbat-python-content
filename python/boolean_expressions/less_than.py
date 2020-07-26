@@ -1,3 +1,5 @@
+# @desc Determine if one value is less than another with the **<** operator.
+
 def less_than(val1, val2):
     result = val1 < val2
     return result

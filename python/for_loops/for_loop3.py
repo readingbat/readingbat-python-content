@@ -1,3 +1,5 @@
+# @desc This is a description of for loop 3
+
 def for_loop3(str, x):
     result = 0
     for i in str[x:]:
