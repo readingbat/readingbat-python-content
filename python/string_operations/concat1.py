@@ -1,4 +1,4 @@
-# @desc Merge two strings.
+# @desc The **+** operator combines two strings into a new string
 
 def concat1(s1, s2):
     result = s1 + s2

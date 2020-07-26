@@ -1,4 +1,4 @@
-# @desc Remember: the first character in a string is at index 0.
+# @desc The first character in a string is at index 0.
 
 def slice1(s):
     c = s[0]

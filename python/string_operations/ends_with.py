@@ -1,4 +1,4 @@
-# @desc The **endswith()** function returns True if a string ends with a specified substring.
+# @desc **endswith()** returns True if a string ends with a specified substring.
 
 def ends_with(s1, s2):
     result = s2.endswith(s1)

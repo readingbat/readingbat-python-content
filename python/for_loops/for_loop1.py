@@ -1,4 +1,4 @@
-# @desc This is a description of for loop 1
+# @desc **+= 2** increments by 2
 
 def for_loop1(x):
     result = 0

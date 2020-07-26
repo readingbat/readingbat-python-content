@@ -1,5 +1,3 @@
-# @desc This is a description of for loop 6
-
 def for_loop6(str, x):
     result = 0
     xl = len(x)

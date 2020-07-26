@@ -1,4 +1,4 @@
-# @desc Manipulate the two strings as the code says.
+# @desc The **int()** function truncates values. **int(5/2)** equals 2
 
 def split(out, word):
     length = int(len(out) / 2)

@@ -1,4 +1,4 @@
-# @desc This is a description of for loop 5
+# @desc **str[y:]** returns a substring starting at index y
 
 def for_loop5(str, x, y):
     result = 0

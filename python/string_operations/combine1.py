@@ -1,4 +1,4 @@
-# @desc Merge the first and last characters of each string.
+# @desc **s[-1]** is the last character of a string
 
 def combine1(s1, s2):
     s3 = s1[0] + s1[-1]

@@ -1,5 +1,3 @@
-# @desc Print a string a certain number of times.
-
 def concat3(t, s):
     result = ''
     for i in range(t):

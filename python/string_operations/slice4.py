@@ -1,4 +1,4 @@
-# @desc Remember a slice is inclusive of the starting index and exclusive of the ending index.
+# @desc A slice is inclusive of the starting index and exclusive of the ending index.
 
 def slice4(s):
     c = s[0:2]

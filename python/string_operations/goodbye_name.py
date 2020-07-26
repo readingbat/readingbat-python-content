@@ -1,5 +1,3 @@
-# @desc Say goodbye to a name.
-
 def goodbye_name(name):
     return 'Goodbye ' + name + '!'
 
