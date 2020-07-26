@@ -1,3 +1,5 @@
+# @desc Truth tables
+
 def andor1(val1, val2):
     result = val1 and val2
     return result

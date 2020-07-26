@@ -1,3 +1,5 @@
+# @desc **len()** returns the length of a string.
+
 def strlen3(s, t):
     length = len(2 * s) + len(3 * t)
     return length

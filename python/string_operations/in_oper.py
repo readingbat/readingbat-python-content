@@ -1,3 +1,5 @@
+# @desc The **in** operator returns True if a specified substring is found in a string.
+
 def in_oper(s1, s2):
     result = s1 in s2
     return result

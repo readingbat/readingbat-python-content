@@ -1,3 +1,5 @@
+# @desc Parentheses override the order of evaluation.
+
 def andor6(val1, val2, val3):
     result = val1 and (val2 or val3)
     return result

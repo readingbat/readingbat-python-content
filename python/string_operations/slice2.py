@@ -1,3 +1,5 @@
+# @desc Remember: the last character in a string is at index -1.
+
 def slice2(s):
     c = s[-1]
     return c

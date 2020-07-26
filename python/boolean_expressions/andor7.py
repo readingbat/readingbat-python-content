@@ -1,3 +1,5 @@
+# @desc Which order are the **and** and the **or** evaluated?
+
 def andor5(val1, val2, val3):
     result = val1 or val2 and val3
     return result

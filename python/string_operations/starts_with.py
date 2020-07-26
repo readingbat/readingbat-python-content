@@ -1,3 +1,5 @@
+# @desc The **startswith()** function returns True if a string starts with a specified substring.
+
 def starts_with(s1, s2):
     result = s2.startswith(s1)
     return result

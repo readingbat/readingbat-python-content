@@ -1,3 +1,5 @@
+# @desc Merge two strings.
+
 def concat1(s1, s2):
     result = s1 + s2
     return result

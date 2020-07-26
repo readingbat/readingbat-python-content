@@ -1,3 +1,5 @@
+# @desc Remember the first character in a string is at index 0.
+
 def slice3(s):
     length = len(s)
     mid = int(length / 2)

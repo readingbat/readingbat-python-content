@@ -1,3 +1,5 @@
+# @desc This is a description of **simple_choice2**
+
 def simple_choice2(sunny, raining):
     if (sunny or raining):
         return sunny

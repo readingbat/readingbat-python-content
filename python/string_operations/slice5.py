@@ -1,3 +1,5 @@
+# @desc Remember a slice is inclusive of the starting index and exclusive of the ending index.
+
 def slice5(s):
     c = s[2:5]
     return c

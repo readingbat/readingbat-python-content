@@ -1,3 +1,5 @@
+# @desc Manipulate the two strings as the code says.
+
 def split(out, word):
     length = int(len(out) / 2)
     return out[:length] + word + out[length:]

@@ -1,3 +1,5 @@
+# @desc The **not** operator flips a boolean value.
+
 def andor3(val1, val2):
     result = not (val1 and val2)
     return result

@@ -1,3 +1,5 @@
+# @desc Merge the first and last characters of each string.
+
 def combine1(s1, s2):
     s3 = s1[0] + s1[-1]
     s4 = s2[0] + s2[-1]

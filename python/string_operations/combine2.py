@@ -1,3 +1,5 @@
+# @desc Remember: the 2nd character in a string is at index 1.
+
 def combine2(s1, s2):
     s3 = s1[1]
     s4 = s2[1]

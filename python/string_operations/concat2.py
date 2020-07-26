@@ -1,3 +1,5 @@
+# @desc Merge three strings."
+
 def concat2(s1, s2, s3):
     result = s1 + s2 + s3
     return result
