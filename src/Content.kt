@@ -157,6 +157,55 @@ val content =
         }
       }
 
+      group("For Loops") {
+        packageName = "for_loops"
+        description = "This is a description of For Loops"
+
+        challenge("for_loop1") {
+          returnType = IntType
+        }
+
+        challenge("for_loop2") {
+          returnType = IntType
+        }
+
+        challenge("for_loop3") {
+          returnType = IntType
+        }
+
+        challenge("for_loop4") {
+          returnType = IntType
+        }
+
+        challenge("for_loop5") {
+          returnType = IntType
+        }
+
+        challenge("for_loop6") {
+          returnType = IntType
+        }
+      }
+
+      group("Lists") {
+        packageName = "lists"
+        description = "This is a description of Lists"
+
+        challenge("list3") {
+          description = "This is a description of Lists"
+          returnType = IntType
+        }
+
+        challenge("list4") {
+          description = "This is a description of Lists"
+          returnType = IntType
+        }
+
+        challenge("list5") {
+          description = "This is a description of Lists"
+          returnType = IntType
+        }
+      }
+
       group("Warmup 1") {
         packageName = "warmup1"
         description = "This is a description of Warmup 1"
@@ -186,52 +235,6 @@ val content =
           returnType = IntType
         }
       }
-      group("For Loops") {
-        packageName = "for_loops"
-        description = "This is a description of For Loops"
 
-        challenge("for_loop1") {
-          returnType = IntType
-        }
-
-        challenge("for_loop2") {
-          returnType = IntType
-        }
-
-        challenge("for_loop3") {
-          returnType = IntType
-        }
-
-        challenge("for_loop4") {
-          returnType = IntType
-        }
-
-        challenge("for_loop5") {
-          returnType = IntType
-        }
-
-        challenge("for_loop6") {
-          returnType = IntType
-        }
-      }
-      group("Lists") {
-        packageName = "lists"
-        description = "This is a description of Lists"
-
-        challenge("list3") {
-          description = "This is a description of Lists"
-          returnType = IntType
-        }
-
-        challenge("list4") {
-          description = "This is a description of Lists"
-          returnType = IntType
-        }
-
-        challenge("list5") {
-          description = "This is a description of Lists"
-          returnType = IntType
-        }
-      }
     }
   }

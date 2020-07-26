@@ -1,4 +1,4 @@
-# @desc This is a description of for loop 3
+# @desc **str[x:]** returns a substring starting at index x
 
 def for_loop3(str, x):
     result = 0
@@ -13,6 +13,8 @@ def main():
     print(for_loop3('apples', 2))
     print(for_loop3('hello', 3))
     print(for_loop3('alphabet', 0))
+    print(for_loop3('aaaaa', 3))
+    print(for_loop3('aaaaa', 4))
     print(for_loop3('aaaaa', 5))
 
 
