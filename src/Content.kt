@@ -234,6 +234,10 @@ val content =
         challenge("x_and_y") {
           returnType = IntType
         }
+
+        challenge("simple_choice1") {
+          returnType = StringType
+        }
       }
 
       group("If statements") {
@@ -247,5 +251,14 @@ val content =
         challenge("if_stmt2") {
           returnType = IntType
         }
+
+        challenge("if_stmt3") {
+          returnType = IntType
+        }
+
+        challenge("if_stmt4") {
+          returnType = IntType
+        }
       }
+    }
   }
