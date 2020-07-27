@@ -157,6 +157,27 @@ val content =
         }
       }
 
+      group("If Statements") {
+        packageName = "if_stmts"
+        description = "This is a description of if statements"
+
+        challenge("if_stmt1") {
+          returnType = IntType
+        }
+
+        challenge("if_stmt2") {
+          returnType = IntType
+        }
+
+        challenge("if_stmt3") {
+          returnType = IntType
+        }
+
+        challenge("if_stmt4") {
+          returnType = IntType
+        }
+      }
+
       group("For Loops") {
         packageName = "for_loops"
         description = "This is a description of For Loops"
@@ -237,27 +258,6 @@ val content =
 
         challenge("simple_choice1") {
           returnType = StringType
-        }
-      }
-
-      group("If statements") {
-        packageName = "if_stmts"
-        description = "This is a description of if statements"
-
-        challenge("if_stmt1") {
-          returnType = IntType
-        }
-
-        challenge("if_stmt2") {
-          returnType = IntType
-        }
-
-        challenge("if_stmt3") {
-          returnType = IntType
-        }
-
-        challenge("if_stmt4") {
-          returnType = IntType
         }
       }
     }
