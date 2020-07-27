@@ -255,10 +255,6 @@ val content =
         challenge("x_and_y") {
           returnType = IntType
         }
-
-        challenge("simple_choice1") {
-          returnType = StringType
-        }
       }
     }
   }
