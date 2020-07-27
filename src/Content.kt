@@ -255,6 +255,26 @@ val content =
         challenge("x_and_y") {
           returnType = IntType
         }
+
+        challenge("replace1") {
+          returnType = IntType
+        }
+
+        challenge("replace2") {
+          returnType = IntType
+        }
+
+        challenge("replace3") {
+          returnType = IntType
+        }
+
+        challenge("replace4") {
+          returnType = IntType
+        }
+
+        challenge("count1") {
+          returnType = IntType
+        }
       }
     }
   }
