@@ -12,7 +12,7 @@ val content =
     python {
 
       group("Boolean Expressions") {
-        packageName = "boolean_expressions"
+        packageName = "boolean_exprs"
         description = "Basic boolean expressions"
 
         challenge("less_than") {
@@ -51,33 +51,7 @@ val content =
           returnType = BooleanType
         }
 
-        challenge("andor1") {
-          returnType = BooleanType
-        }
-
-        challenge("andor2") {
-          returnType = BooleanType
-        }
-
-        challenge("andor3") {
-          returnType = BooleanType
-        }
-
-        challenge("andor4") {
-          returnType = BooleanType
-        }
-
-        challenge("andor5") {
-          returnType = BooleanType
-        }
-
-        challenge("andor6") {
-          returnType = BooleanType
-        }
-
-        challenge("andor7") {
-          returnType = BooleanType
-        }
+        includeFilesWithType = "andor*.py" returns BooleanType
       }
 
       group("String Operations") {
@@ -209,27 +183,14 @@ val content =
 
       group("Lists") {
         packageName = "lists"
-        description = "This is a description of Lists"
+        description = "Basic list challenges"
 
-        challenge("list3") {
-          description = "This is a description of Lists"
-          returnType = IntType
-        }
-
-        challenge("list4") {
-          description = "This is a description of Lists"
-          returnType = IntType
-        }
-
-        challenge("list5") {
-          description = "This is a description of Lists"
-          returnType = IntType
-        }
+        includeFilesWithType = "list*.py" returns IntType
       }
 
       group("Warmup 1") {
         packageName = "warmup1"
-        description = "This is a description of Warmup 1"
+        description = "Warmup 1 challenges"
 
         challenge("simple_choice1") {
           returnType = BooleanType
