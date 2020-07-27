@@ -236,5 +236,16 @@ val content =
         }
       }
 
-    }
+      group("If statements") {
+        packageName = "if_stmts"
+        description = "This is a description of if statements"
+
+        challenge("if_stmt1") {
+          returnType = IntType
+        }
+
+        challenge("if_stmt2") {
+          returnType = IntType
+        }
+      }
   }
