@@ -159,7 +159,7 @@ val content =
 
       group("If Statements") {
         packageName = "if_stmts"
-        description = "This is a description of if statements"
+        description = "Basic if statements"
 
         challenge("if_stmt1") {
           returnType = IntType
@@ -180,7 +180,7 @@ val content =
 
       group("For Loops") {
         packageName = "for_loops"
-        description = "This is a description of For Loops"
+        description = "Basic for loops"
 
         challenge("for_loop1") {
           returnType = IntType

@@ -1,9 +1,9 @@
 def if_stmt3(x, y):
-    if x > 10 and y == True:
-        x+=5
+    if x > 10 and y:
+        return x + 10
     else:
         return x
-    return x
+
 
 def main():
     print(if_stmt3(15, True))

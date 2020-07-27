@@ -1,7 +1,8 @@
 def if_stmt1(x):
     if x > 10:
         return x
-    return 0
+    return 3
+
 
 def main():
     print(if_stmt1(5))

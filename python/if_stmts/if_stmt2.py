@@ -1,9 +1,9 @@
 def if_stmt2(x):
     if x > 10:
-        x+=5
+        return x + 5
     else:
         return x
-    return x
+
 
 def main():
     print(if_stmt2(5))

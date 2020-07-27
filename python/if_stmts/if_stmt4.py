@@ -1,8 +1,9 @@
 def if_stmt4(x, y, z):
-    if x == True and y > z:
+    if x and y > z:
         return y
     else:
         return z
+
 
 def main():
     print(if_stmt4(True, 3, 1))
