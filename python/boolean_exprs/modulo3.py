@@ -1,16 +1,16 @@
 # @desc **% 2**" is an easy way of testing if a number is odd or even.
 
-def is_odd(num):
+def modulo3(num):
     result = num % 2 == 1
     return result
 
 
 def main():
-    print(is_odd(9))
-    print(is_odd(13))
-    print(is_odd(10))
-    print(is_odd(31))
-    print(is_odd(8))
+    print(modulo3(9))
+    print(modulo3(13))
+    print(modulo3(10))
+    print(modulo3(31))
+    print(modulo3(8))
 
 
 if __name__ == '__main__':
