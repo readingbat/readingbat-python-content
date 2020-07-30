@@ -1,4 +1,4 @@
-# @desc **% 2**" is an easy way of testing if a number is odd or even.
+# @desc **%2** is an easy way of testing if a number is odd or even.
 
 def modulo2(num):
     result = num % 2

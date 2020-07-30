@@ -1,4 +1,4 @@
-# @desc Determine if two value are not equal with the "**!=**" operator.
+# @desc Determine if two value are not equal with the **!=** operator.
 
 def not_equal(val1, val2):
     result = val1 != val2
