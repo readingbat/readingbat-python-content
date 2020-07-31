@@ -1,13 +1,17 @@
 import com.github.pambrose.common.util.FileSystemSource
 import com.github.pambrose.common.util.GitHubRepo
+import com.github.pambrose.common.util.OwnerType.Organization
 import com.github.readingbat.dsl.ReturnType.*
 import com.github.readingbat.dsl.isProduction
 import com.github.readingbat.dsl.readingBatContent
 
 val content =
   readingBatContent {
-    repo = if (isProduction()) GitHubRepo("readingbat", "readingbat-python-content") else FileSystemSource("./")
-    branchName = "master"
+    repo =
+      if (isProduction())
+        GitHubRepo(Organization, "readingbat", "readingbat-python-content")
+      else
+        FileSystemSource("./")
 
     python {
 
