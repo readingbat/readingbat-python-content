@@ -59,7 +59,7 @@ val content =
       }
 
       group("String Operations") {
-        packageName = "string_operations"
+        packageName = "string_ops"
         description = "Basic string operations"
 
         challenge("goodbye_name") {
