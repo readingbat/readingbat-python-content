@@ -222,19 +222,19 @@ val content =
         }
 
         challenge("replace1") {
-          returnType = IntType
+          returnType = StringType
         }
 
         challenge("replace2") {
-          returnType = IntType
+          returnType = StringType
         }
 
         challenge("replace3") {
-          returnType = IntType
+          returnType = StringType
         }
 
         challenge("replace4") {
-          returnType = IntType
+          returnType = StringType
         }
 
         challenge("count1") {

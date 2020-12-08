@@ -3,7 +3,8 @@ def replace4(x):
         return x
     if x[0] == x[len(x) - 1]:
         return x[0] + x
-    return x + x[len(x)-1]
+    return x + x[len(x) - 1]
+
 
 def main():
     print(replace4('hello'))
@@ -13,6 +14,7 @@ def main():
     print(replace4('goodbye'))
     print(replace4('oof'))
     print(replace4('a'))
+
 
 if __name__ == '__main__':
     main()

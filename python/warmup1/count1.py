@@ -1,9 +1,10 @@
 def count1(x):
     count = 0
     for i in range(len(x)):
-        if x[i:i+2] == 'ba':
-            count+=1
+        if x[i:i + 2] == 'ba':
+            count += 1
     return count
+
 
 def main():
     print(count1('baba'))
@@ -13,6 +14,7 @@ def main():
     print(count1('goodbye'))
     print(count1('a'))
     print(count1('ba'))
+
 
 if __name__ == '__main__':
     main()
