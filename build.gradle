@@ -31,6 +31,8 @@ dependencies {
 
     implementation "com.github.readingbat.readingbat-core:readingbat-core:$readingbat_version"
 
+    runtimeOnly "org.jetbrains.kotlin:kotlin-scripting-jsr223"
+
     implementation "com.github.pambrose.common-utils:core-utils:$utils_version"
     implementation "io.github.microutils:kotlin-logging:$logging_version"
     implementation "ch.qos.logback:logback-classic:$logback_version"
