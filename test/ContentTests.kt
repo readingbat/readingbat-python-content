@@ -47,7 +47,7 @@ class ContentTests : StringSpec({
           forEachChallenge {
             answerAllWith(this@withTestApplication, "") {
               answerStatus shouldBe NOT_ANSWERED
-              message.shouldBeBlank()
+              hint.shouldBeBlank()
             }
 
             answerAllWith(this@withTestApplication, "wrong answer") {
@@ -56,7 +56,7 @@ class ContentTests : StringSpec({
 
             answerAllWithCorrectAnswer(this@withTestApplication) {
               answerStatus shouldBe CORRECT
-              message.shouldBeBlank()
+              hint.shouldBeBlank()
             }
           }
         }
