@@ -41,7 +41,6 @@ class ContentTests : StringSpec({
 
   "Test all challenges" {
     withTestApplication({ testModule(content) }) {
-
       content.forEachLanguage {
         forEachGroup {
           forEachChallenge {
