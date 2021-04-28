@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'application'
-    id 'org.jetbrains.kotlin.jvm' version '1.4.31'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.32'
     id "com.github.ben-manes.versions" version "0.38.0"
 }
 
@@ -17,16 +17,16 @@ group 'com.github.pambrose.readingbat'
 version '1.0-SNAPSHOT'
 
 repositories {
-    maven { url 'https://maven-central.storage-download.googleapis.com/repos/central/data/' }
-    maven { url 'https://kotlin.bintray.com/ktor' }
-    maven { url 'https://kotlin.bintray.com/kotlinx' }
-    maven { url 'https://kotlin.bintray.com/kotlin-js-wrappers' }
-    jcenter()
-    maven { url 'https://jitpack.io' }
+    maven { url = 'https://kotlin.bintray.com/ktor' }
+    maven { url = 'https://kotlin.bintray.com/kotlinx' }
+    maven { url = 'https://kotlin.bintray.com/kotlin-js-wrappers' }
+    maven { url = 'https://maven-central.storage-download.googleapis.com/repos/central/data/' }
+    mavenCentral()
+    maven { url = 'https://jitpack.io' }
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
 
     implementation "com.github.readingbat.readingbat-core:readingbat-core:$readingbat_version"
