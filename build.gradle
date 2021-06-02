@@ -1,8 +1,8 @@
 plugins {
     id 'java'
     id 'application'
-    id 'org.jetbrains.kotlin.jvm' version '1.5.0'
-    id "com.github.ben-manes.versions" version "0.38.0"
+    id 'org.jetbrains.kotlin.jvm' version '1.5.20-M1'
+    id "com.github.ben-manes.versions" version "0.39.0"
 }
 
 // This is for ./gradlew run
@@ -20,6 +20,7 @@ repositories {
     maven { url = 'https://kotlin.bintray.com/ktor' }
     maven { url = 'https://kotlin.bintray.com/kotlinx' }
     maven { url = 'https://kotlin.bintray.com/kotlin-js-wrappers' }
+    maven { url = "https://maven.pkg.jetbrains.space/kotlin/p/kotlin/kotlin-js-wrappers" }
     maven { url = 'https://maven-central.storage-download.googleapis.com/repos/central/data/' }
     mavenCentral()
     maven { url = 'https://jitpack.io' }
@@ -43,9 +44,9 @@ dependencies {
     testImplementation "io.ktor:ktor-server-test-host:$ktor_version"
 
     testImplementation "io.kotest:kotest-runner-junit5:$kotest_version"
-    testImplementation "io.kotest:kotest-assertions-core:$kotest_version"
-    testImplementation "io.kotest:kotest-assertions-ktor:$kotest_version"
     testImplementation "io.kotest:kotest-property:$kotest_version"
+    testImplementation "io.kotest:kotest-assertions-core:$kotest_version"
+    testImplementation "io.kotest:kotest-assertions-ktor:$kotest_ktor_version"
 
     testImplementation "org.junit.jupiter:junit-jupiter:$junit_version"
 }
