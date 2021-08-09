@@ -32,7 +32,7 @@ dependencies {
 
     implementation "com.github.readingbat.readingbat-core:readingbat-core:$readingbat_version"
 
-    runtimeOnly "org.jetbrains.kotlin:kotlin-scripting-jsr223"
+    runtimeOnly "org.jetbrains.kotlin:kotlin-scripting-jsr223:$kotlin_version"
 
     implementation "com.github.pambrose.common-utils:core-utils:$utils_version"
     implementation "io.github.microutils:kotlin-logging:$logging_version"
