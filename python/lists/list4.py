@@ -1,6 +1,6 @@
-def list4(str, x):
+def list4(strs, x):
     result = 0
-    for i in str[x:]:
+    for i in strs[x:]:
         if i == 'a':
             result += 1
     return result

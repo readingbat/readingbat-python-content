@@ -1,6 +1,6 @@
-def list3(str):
+def list3(strs):
     result = 0
-    for i in str:
+    for i in strs:
         if i == 'a':
             result += 1
     return result
