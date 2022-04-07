@@ -15,26 +15,18 @@
  *
  */
 
-import com.github.pambrose.common.util.*
-import com.github.readingbat.TestSupport.answerAllWith
-import com.github.readingbat.TestSupport.answerAllWithCorrectAnswer
-import com.github.readingbat.TestSupport.forEachAnswer
-import com.github.readingbat.TestSupport.forEachChallenge
-import com.github.readingbat.TestSupport.forEachGroup
-import com.github.readingbat.TestSupport.forEachLanguage
-import com.github.readingbat.TestSupport.shouldHaveAnswer
-import com.github.readingbat.TestSupport.testModule
-import com.github.readingbat.common.*
-import com.github.readingbat.common.Property.*
-import com.github.readingbat.dsl.*
-import com.github.readingbat.posts.*
+import com.github.readingbat.kotest.TestSupport.answerAllWith
+import com.github.readingbat.kotest.TestSupport.answerAllWithCorrectAnswer
+import com.github.readingbat.kotest.TestSupport.forEachAnswer
+import com.github.readingbat.kotest.TestSupport.forEachChallenge
+import com.github.readingbat.kotest.TestSupport.forEachGroup
+import com.github.readingbat.kotest.TestSupport.forEachLanguage
+import com.github.readingbat.kotest.TestSupport.shouldHaveAnswer
+import com.github.readingbat.kotest.TestSupport.testModule
 import com.github.readingbat.posts.AnswerStatus.*
-import com.github.readingbat.server.*
-import io.kotest.core.spec.style.*
-import io.kotest.matchers.*
-import io.kotest.matchers.string.*
-import io.ktor.application.*
-import io.ktor.server.engine.*
+import io.kotest.core.spec.style.StringSpec
+import io.kotest.matchers.shouldBe
+import io.kotest.matchers.string.shouldBeBlank
 import io.ktor.server.testing.*
 
 class ContentTests : StringSpec({
