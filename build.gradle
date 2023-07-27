@@ -1,17 +1,14 @@
 plugins {
     id 'java'
     id 'application'
-    id 'org.jetbrains.kotlin.jvm' version '1.7.20'
-    id "com.github.ben-manes.versions" version "0.44.0"
+    id 'org.jetbrains.kotlin.jvm' version '1.9.0'
+    id "com.github.ben-manes.versions" version "0.47.0"
 }
 
 // This is for ./gradlew run
 application {
     mainClassName = "ContentServer"
 }
-
-sourceCompatibility = JavaVersion.VERSION_17
-targetCompatibility = JavaVersion.VERSION_17
 
 group 'com.github.pambrose.readingbat'
 version '1.0-SNAPSHOT'
@@ -35,6 +32,10 @@ sourceSets {
     test.resources.srcDirs = ['testresources']
 }
 
+kotlin {
+    jvmToolchain(17)
+}
+
 test {
     useJUnitPlatform()
 
@@ -43,8 +44,4 @@ test {
         exceptionFormat "full"
         showStandardStreams = true
     }
-}
-
-kotlin {
-    jvmToolchain(17)
 }
