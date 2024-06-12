@@ -1,8 +1,8 @@
 plugins {
     id 'java'
     id 'application'
-    id 'org.jetbrains.kotlin.jvm' version '1.9.20=2'
-    id "com.github.ben-manes.versions" version "0.50.0"
+    id 'org.jetbrains.kotlin.jvm' version '2.0.0'
+    id "com.github.ben-manes.versions" version "0.51.0"
 }
 
 // This is for ./gradlew run
@@ -22,7 +22,7 @@ repositories {
 dependencies {
     implementation "com.github.readingbat.readingbat-core:readingbat-core:$readingbat_version"
     implementation "com.github.pambrose.common-utils:core-utils:$utils_version"
-    implementation "io.github.microutils:kotlin-logging:$logging_version"
+    implementation "io.github.oshai:kotlin-logging-jvm:$logging_version"
 }
 
 sourceSets {
