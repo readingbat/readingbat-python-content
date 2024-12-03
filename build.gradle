@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'application'
-    id 'org.jetbrains.kotlin.jvm' version '2.0.21'
+    id 'org.jetbrains.kotlin.jvm' version '2.1.0'
     id "com.github.ben-manes.versions" version "0.51.0"
 }
 
@@ -20,7 +20,7 @@ repositories {
 }
 
 dependencies {
-    implementation "com.github.readingbat.readingbat-core:readingbat-core:$readingbat_version"
+    implementation "com.github.readingbat:readingbat-core:$readingbat_version"
     implementation "com.github.pambrose.common-utils:core-utils:$utils_version"
     implementation "io.github.oshai:kotlin-logging-jvm:$logging_version"
 }
