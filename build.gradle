@@ -2,12 +2,12 @@ plugins {
     id 'java'
     id 'application'
     id 'org.jetbrains.kotlin.jvm' version '2.1.0'
-    id "com.github.ben-manes.versions" version "0.51.0"
+    id "com.github.ben-manes.versions" version "0.52.0"
 }
 
 // This is for ./gradlew run
 application {
-    mainClassName = "ContentServer"
+    mainClass = "ContentServer"
 }
 
 group 'com.github.pambrose.readingbat'
