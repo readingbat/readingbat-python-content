@@ -1,5 +1,5 @@
 /*
- * Copyright © 2020 Paul Ambrose (pambrose@mac.com)
+ * Copyright © 2025 Paul Ambrose (pambrose@mac.com)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,30 +23,34 @@ import com.github.readingbat.kotest.TestSupport.forEachGroup
 import com.github.readingbat.kotest.TestSupport.forEachLanguage
 import com.github.readingbat.kotest.TestSupport.shouldHaveAnswer
 import com.github.readingbat.kotest.TestSupport.testModule
-import com.github.readingbat.posts.AnswerStatus.*
+import com.github.readingbat.posts.AnswerStatus
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.string.shouldBeBlank
-import io.ktor.server.testing.*
+import io.ktor.server.testing.testApplication
 
 class ContentTests : StringSpec({
 
   "Test all challenges" {
-    withTestApplication({ testModule(content) }) {
+    testApplication {
+      application {
+        testModule(content)
+      }
+
       content.forEachLanguage {
         forEachGroup {
           forEachChallenge {
-            answerAllWith(this@withTestApplication, "") {
-              answerStatus shouldBe NOT_ANSWERED
+            answerAllWith(this@testApplication, "") {
+              answerStatus shouldBe AnswerStatus.NOT_ANSWERED
               hint.shouldBeBlank()
             }
 
-            answerAllWith(this@withTestApplication, "wrong answer") {
-              answerStatus shouldBe INCORRECT
+            answerAllWith(this@testApplication, "wrong answer") {
+              answerStatus shouldBe AnswerStatus.INCORRECT
             }
 
-            answerAllWithCorrectAnswer(this@withTestApplication) {
-              answerStatus shouldBe CORRECT
+            answerAllWithCorrectAnswer(this@testApplication) {
+              answerStatus shouldBe AnswerStatus.CORRECT
               hint.shouldBeBlank()
             }
           }
@@ -56,7 +60,11 @@ class ContentTests : StringSpec({
   }
 
   "Test with correct answers" {
-    withTestApplication({ testModule(content) }) {
+    testApplication {
+      application {
+        testModule(content)
+      }
+
       content.forEachLanguage {
         forEachGroup {
           forEachChallenge {
@@ -70,7 +78,11 @@ class ContentTests : StringSpec({
   }
 
   "Test individual challenges" {
-    withTestApplication({ testModule(content) }) {
+    testApplication {
+      application {
+        testModule(content)
+      }
+
       /*
       content.pythonChallenge("Group 1", "find_it") {
         answerFor(0) shouldNotHaveAnswer "true"

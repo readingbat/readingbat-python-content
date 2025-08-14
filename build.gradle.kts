@@ -1,8 +1,8 @@
 plugins {
   java
   application
-  kotlin("jvm") version "2.1.0"
-  id("com.github.ben-manes.versions") version "0.52.0"
+  alias(libs.plugins.kotlin.jvm)
+  alias(libs.plugins.versions)
 }
 
 // This is for ./gradlew run
@@ -11,7 +11,7 @@ application {
 }
 
 group = "com.github.pambrose.readingbat"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
   google()
@@ -20,27 +20,14 @@ repositories {
 }
 
 dependencies {
-  implementation("com.github.readingbat:readingbat-core:${property("readingbat_version")}")
-  implementation("com.github.pambrose.common-utils:core-utils:${property("utils_version")}")
-  implementation("io.github.oshai:kotlin-logging-jvm:${property("logging_version")}")
+  implementation(libs.readingbat.core)
+  implementation(libs.common.utils.core)
+  implementation(libs.kotlin.logging)
 
-  testImplementation("com.github.readingbat:readingbat-core:${property("readingbat_version")}")
-  testImplementation("io.kotest:kotest-runner-junit5:5.8.0")
-  testImplementation("io.kotest:kotest-assertions-core:5.8.0")
-  testImplementation("io.ktor:ktor-server-test-host:2.3.7")
-}
-
-sourceSets {
-  main {
-    kotlin.srcDirs("src")
-    java.srcDirs("src")
-    resources.srcDirs("resources")
-  }
-  test {
-    kotlin.srcDirs("test")
-    java.srcDirs("test")
-    resources.srcDirs("testresources")
-  }
+  testImplementation(libs.readingbat.core)
+  testImplementation(libs.kotest.runner)
+  testImplementation(libs.kotest.assertions)
+  testImplementation(libs.ktor.server.test)
 }
 
 kotlin {

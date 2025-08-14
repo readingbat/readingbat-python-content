@@ -1,0 +1,21 @@
+[versions]
+kotest = "6.0.0.M16"
+kotlin = "2.2.10"
+kotlin-logging = "7.0.12"
+ktor = "3.2.3"
+readingbat = "2.1.2"
+utils = "2.4.0"
+versions = "0.52.0"
+
+[libraries]
+readingbat-core = { module = "com.github.readingbat:readingbat-core", version.ref = "readingbat" }
+common-utils-core = { module = "com.github.pambrose.common-utils:core-utils", version.ref = "utils" }
+kotlin-logging = { module = "io.github.oshai:kotlin-logging-jvm", version.ref = "kotlin-logging" }
+
+kotest-runner = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
+kotest-assertions = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
+ktor-server-test = { module = "io.ktor:ktor-server-test-host", version.ref = "ktor" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+versions = { id = "com.github.ben-manes.versions", version.ref = "versions" }
