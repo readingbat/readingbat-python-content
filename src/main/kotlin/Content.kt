@@ -26,7 +26,7 @@ val content =
   readingBatContent {
     repo =
       if (isProduction())
-        GitHubRepo(Organization, "readingbat", "readingbat-python-.content")
+        GitHubRepo(Organization, "readingbat", "readingbat-python-content")
       else
         FileSystemSource("./")
 
