@@ -1,0 +1,45 @@
+# ReadingBat Python Content
+
+> Python programming challenges served via a Kotlin-based ReadingBat server for student learning.
+
+## Overview
+
+This repository contains Python challenge files and a Kotlin server that serves them through the ReadingBat platform. Students solve challenges in the browser; the server evaluates answers by running Python functions against test cases.
+
+## Architecture
+
+Two-language system: Kotlin defines and serves challenges; Python files are the challenges.
+
+- `src/main/kotlin/Content.kt`: DSL configuration mapping Python files to challenge groups and return types
+- `src/main/kotlin/ContentServer.kt`: Entry point, starts ReadingBatServer
+- `python/`: Challenge files organized by topic (boolean_exprs, string_ops, if_stmts, for_loops, lists, warmup1)
+- `src/test/kotlin/ContentTests.kt`: Validates all challenges accept correct answers and reject wrong ones
+
+## Content DSL
+
+Challenges are registered in Content.kt two ways:
+- Individually: `challenge("name") { returnType = BooleanType }`
+- Bulk via glob: `includeFilesWithType = "pattern*.py" returns Type`
+
+Return types: BooleanType, StringType, IntType, BooleanListType, IntListType, StringListType
+
+Production reads from GitHub; development reads from local filesystem.
+
+## Python Challenge File Pattern
+
+Each .py file has: a `# @desc` comment, a function implementing the challenge, and a `main()` with `print()` calls that define test cases and expected answers.
+
+## Development
+
+- Build: `make compile`
+- Test: `make tests`
+- Run server: `make run`
+- Continuous build: `make cc`
+- JVM toolchain: Java 17
+- Testing: Kotest with JUnit5
+
+## Adding Challenges
+
+1. Create `python/<group_dir>/challenge_name.py` with function and main() test cases
+2. Register in Content.kt with correct return type
+3. Run `make tests` to verify
