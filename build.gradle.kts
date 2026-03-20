@@ -1,5 +1,4 @@
 plugins {
-  java
   application
   alias(libs.plugins.kotlin.jvm)
   alias(libs.plugins.versions)
@@ -7,7 +6,7 @@ plugins {
 
 // This is for ./gradlew run
 application {
-  mainClass.set("ContentServer")
+  mainClass = "ContentServerKt"
 }
 
 group = "com.github.pambrose.readingbat"
