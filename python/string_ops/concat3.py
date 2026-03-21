@@ -1,3 +1,5 @@
+# @desc Using **+=** in a loop repeatedly appends to a string. Think about how many times the loop runs.
+
 def concat3(t, s):
     result = ''
     for i in range(t):

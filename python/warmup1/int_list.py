@@ -1,4 +1,4 @@
-# @desc This is a description of **int_list**
+# @desc The **if/else** inside the loop appends **1** or **0** depending on whether each value passes the test.
 
 def above_five(vals):
     results = []

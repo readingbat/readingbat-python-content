@@ -1,3 +1,5 @@
+# @desc **x[1:len(x)-1]** extracts the middle of a string, skipping the first and last characters.
+
 def replace1(x):
     str = 'hi' + x[1:len(x) - 1] + 'hi'
     return str

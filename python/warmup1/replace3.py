@@ -1,3 +1,5 @@
+# @desc String slicing can rearrange parts of a string. Pay attention to which indices select which characters.
+
 def replace3(x):
     if len(x) <= 4:
         return x

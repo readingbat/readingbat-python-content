@@ -1,3 +1,5 @@
+# @desc Trace through each **if** condition carefully. The first and last characters determine which branches run.
+
 def replace2(x):
     str = ''
     if x[0] != 'a':

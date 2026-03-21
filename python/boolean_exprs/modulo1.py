@@ -1,6 +1,5 @@
 # @desc The **%** operator returns the remainder after dividing two numbers. See more details [here](https://blog.mattclemente.com/2019/07/12/modulus-operator-modulo-operation.html).
 
-
 def modulo1(num, mod):
     result = num % mod
     return result

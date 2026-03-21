@@ -1,3 +1,5 @@
+# @desc A boolean value like True or False can be used directly as a condition in an **if** statement.
+
 def if_stmt4(x, y, z):
     if x and y > z:
         return y

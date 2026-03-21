@@ -1,3 +1,5 @@
+# @desc A **for** loop visits each character in a string; use **==** to compare characters.
+
 def for_loop4(str, x):
     result = 0
     for i in str:

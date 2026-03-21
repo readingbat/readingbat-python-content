@@ -1,3 +1,5 @@
+# @desc **range(x)** generates numbers from 0 up to (but not including) **x**.
+
 def list1(x):
     result = 0
     for i in range(x):

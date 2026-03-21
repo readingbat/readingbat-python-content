@@ -1,4 +1,4 @@
-# @desc This is a description of **boolean_list**
+# @desc Each element is compared with **>** to produce True or False, and the results are collected into a list.
 
 def above_five(vals):
     results = []

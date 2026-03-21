@@ -1,3 +1,5 @@
+# @desc **range(x, y, z)** generates numbers from **x** up to (but not including) **y**, stepping by **z**.
+
 def list5(x, y, z):
     result = []
     for i in range(x, y, z):

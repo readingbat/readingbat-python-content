@@ -1,3 +1,5 @@
+# @desc An **if/else** runs one branch or the other, but never both.
+
 def if_stmt2(x):
     if x > 10:
         return x + 5

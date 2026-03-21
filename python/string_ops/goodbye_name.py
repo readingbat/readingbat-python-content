@@ -1,3 +1,5 @@
+# @desc The **+** operator joins strings together exactly as they are, including any spaces you add.
+
 def goodbye_name(name):
     return 'Goodbye ' + name + '!'
 
