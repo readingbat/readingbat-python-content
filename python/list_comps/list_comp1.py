@@ -1,7 +1,7 @@
 # @desc A list comprehension **[x for x in lst]** creates a new list by visiting each element.
 
 def list_comp1(lst):
-    return [x for x in lst]
+    return [str(x) for x in lst]
 
 
 def main():

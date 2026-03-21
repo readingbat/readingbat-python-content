@@ -1,7 +1,7 @@
 # @desc Tuples use the same indexing as lists — the first element is at index **0**.
 
 def tuple1(t):
-    return t[0]
+    return str(t[0])
 
 
 def main():

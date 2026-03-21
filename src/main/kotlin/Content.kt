@@ -190,7 +190,7 @@ val content =
         packageName = "tuples"
         description = "Immutable sequences and tuple operations"
 
-        challenge("tuple1") { returnType = IntType }
+        challenge("tuple1") { returnType = StringType }
         challenge("tuple2") { returnType = IntType }
         challenge("tuple3") { returnType = StringType }
         challenge("tuple4") { returnType = BooleanType }
@@ -221,7 +221,7 @@ val content =
         packageName = "list_comps"
         description = "Building lists with concise one-line expressions"
 
-        challenge("list_comp1") { returnType = IntListType }
+        challenge("list_comp1") { returnType = StringListType }
         challenge("list_comp2") { returnType = IntListType }
         challenge("list_comp3") { returnType = IntListType }
         challenge("list_comp4") { returnType = StringListType }
@@ -230,7 +230,6 @@ val content =
         challenge("list_comp7") { returnType = IntListType }
         challenge("list_comp8") { returnType = StringListType }
         challenge("list_comp9") { returnType = IntListType }
-        challenge("list_comp10") { returnType = IntListType }
       }
     }
   }
