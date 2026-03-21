@@ -23,7 +23,6 @@ dependencies {
   implementation(libs.common.utils.core)
   implementation(libs.kotlin.logging)
 
-  testImplementation(libs.readingbat.core)
   testImplementation(libs.kotest.runner)
   testImplementation(libs.kotest.assertions)
   testImplementation(libs.ktor.server.test)
