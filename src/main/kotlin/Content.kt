@@ -83,6 +83,124 @@ val content =
         includeFilesWithType = "list*.py" returns IntType
       }
 
+      group("Math Operations") {
+        packageName = "math_ops"
+        description = "Arithmetic operators, order of operations, and built-in math functions"
+        includeFilesWithType = "math*.py" returns IntType
+      }
+
+      group("While Loops") {
+        packageName = "while_loops"
+        description = "Loops that repeat while a condition is true"
+
+        challenge("while_loop1") { returnType = IntType }
+        challenge("while_loop2") { returnType = IntType }
+        challenge("while_loop3") { returnType = IntType }
+        challenge("while_loop4") { returnType = IntType }
+        challenge("while_loop5") { returnType = IntType }
+        challenge("while_loop6") { returnType = IntType }
+        challenge("while_loop7") { returnType = StringType }
+        challenge("while_loop8") { returnType = StringType }
+        challenge("while_loop9") { returnType = IntType }
+        challenge("while_loop10") { returnType = StringType }
+      }
+
+      group("Nested Loops") {
+        packageName = "nested_loops"
+        description = "Loops inside loops"
+
+        challenge("nested1") { returnType = IntType }
+        challenge("nested2") { returnType = IntType }
+        challenge("nested3") { returnType = IntType }
+        challenge("nested4") { returnType = IntType }
+        challenge("nested5") { returnType = StringType }
+        challenge("nested6") { returnType = IntType }
+        challenge("nested7") { returnType = IntType }
+        challenge("nested8") { returnType = BooleanType }
+        challenge("nested9") { returnType = IntType }
+      }
+
+      group("String Methods") {
+        packageName = "string_methods"
+        description = "Built-in string methods like upper(), lower(), replace(), and more"
+
+        challenge("upper1") { returnType = StringType }
+        challenge("lower1") { returnType = StringType }
+        challenge("strip1") { returnType = StringType }
+        challenge("replace_str1") { returnType = StringType }
+        challenge("find1") { returnType = IntType }
+        challenge("count_str1") { returnType = IntType }
+        challenge("title1") { returnType = StringType }
+        challenge("capitalize1") { returnType = StringType }
+        challenge("join1") { returnType = StringType }
+        challenge("isdigit1") { returnType = BooleanType }
+        challenge("swapcase1") { returnType = StringType }
+        challenge("split1") { returnType = StringListType }
+      }
+
+      group("Type Conversion") {
+        packageName = "type_conv"
+        description = "Converting between integers, strings, floats, and booleans"
+
+        challenge("type_conv1") { returnType = IntType }
+        challenge("type_conv2") { returnType = StringType }
+        challenge("type_conv3") { returnType = StringType }
+        challenge("type_conv4") { returnType = IntType }
+        challenge("type_conv5") { returnType = BooleanType }
+        challenge("type_conv6") { returnType = StringType }
+        challenge("type_conv7") { returnType = StringType }
+        challenge("type_conv8") { returnType = IntType }
+        challenge("type_conv9") { returnType = IntType }
+        challenge("type_conv10") { returnType = IntType }
+      }
+
+      group("Dictionaries") {
+        packageName = "dictionaries"
+        description = "Key-value data storage with Python dictionaries"
+
+        challenge("dict1") { returnType = IntType }
+        challenge("dict2") { returnType = IntType }
+        challenge("dict3") { returnType = BooleanType }
+        challenge("dict4") { returnType = StringType }
+        challenge("dict5") { returnType = IntType }
+        challenge("dict6") { returnType = StringListType }
+        challenge("dict7") { returnType = IntListType }
+        challenge("dict8") { returnType = IntType }
+        challenge("dict9") { returnType = IntType }
+        challenge("dict10") { returnType = StringType }
+      }
+
+      group("Tuples") {
+        packageName = "tuples"
+        description = "Immutable sequences and tuple operations"
+
+        challenge("tuple1") { returnType = IntType }
+        challenge("tuple2") { returnType = IntType }
+        challenge("tuple3") { returnType = StringType }
+        challenge("tuple4") { returnType = BooleanType }
+        challenge("tuple5") { returnType = StringType }
+        challenge("tuple6") { returnType = IntType }
+        challenge("tuple7") { returnType = IntType }
+        challenge("tuple8") { returnType = IntType }
+        challenge("tuple9") { returnType = IntType }
+      }
+
+      group("List Comprehensions") {
+        packageName = "list_comps"
+        description = "Building lists with concise one-line expressions"
+
+        challenge("list_comp1") { returnType = IntListType }
+        challenge("list_comp2") { returnType = IntListType }
+        challenge("list_comp3") { returnType = IntListType }
+        challenge("list_comp4") { returnType = StringListType }
+        challenge("list_comp5") { returnType = IntListType }
+        challenge("list_comp6") { returnType = IntListType }
+        challenge("list_comp7") { returnType = IntListType }
+        challenge("list_comp8") { returnType = StringListType }
+        challenge("list_comp9") { returnType = IntListType }
+        challenge("list_comp10") { returnType = IntListType }
+      }
+
       group("Warmup 1") {
         packageName = "warmup1"
         description = "Warmup 1 challenges"
