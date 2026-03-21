@@ -111,6 +111,8 @@ val content =
         challenge("replace4") { returnType = StringType }
 
         challenge("count1") { returnType = IntType }
+
+        challenge("front_back") { returnType = StringType }
       }
     }
   }
