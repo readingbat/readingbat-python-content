@@ -1,3 +1,5 @@
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+
 plugins {
   application
   alias(libs.plugins.kotlin.jvm)
@@ -10,7 +12,7 @@ application {
 }
 
 group = "com.github.pambrose.readingbat"
-version = "1.0"
+version = "1.0.0"
 
 repositories {
   google()
@@ -36,7 +38,7 @@ tasks.test {
   useJUnitPlatform()
 
   testLogging {
-    events("passed", "skipped", "failed", "standardOut", "standardError")
+    events = setOf(TestLogEvent.PASSED, TestLogEvent.SKIPPED, TestLogEvent.FAILED)
     exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
     showStandardStreams = true
   }
