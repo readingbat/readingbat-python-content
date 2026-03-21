@@ -1,4 +1,4 @@
-# @desc This is a description of **string_list**
+# @desc The loop checks each value and appends either **'a'** or **'b'** to the result list based on the condition.
 
 def above_five(vals):
     results = []

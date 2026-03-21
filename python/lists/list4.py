@@ -1,3 +1,5 @@
+# @desc **list[x:]** returns a new list starting from index **x** to the end.
+
 def list4(strs, x):
     result = 0
     for i in strs[x:]:

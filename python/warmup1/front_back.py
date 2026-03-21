@@ -1,3 +1,5 @@
+# @desc **s[0]** is the first character and **s[-1]** is the last character of a string.
+
 def front_back(s):
     if (len(s) < 2):
         return s

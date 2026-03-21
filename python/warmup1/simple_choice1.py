@@ -1,4 +1,4 @@
-# @desc This is a description of **simple_choice1**
+# @desc The **not** operator flips True to False and False to True. Trace which branch the **if** takes.
 
 def simple_choice1(sunny):
     if (not sunny):

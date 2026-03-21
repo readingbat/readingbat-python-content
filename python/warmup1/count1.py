@@ -1,3 +1,5 @@
+# @desc **x[i:i+2]** extracts a 2-character substring starting at index **i**. The loop checks every position.
+
 def count1(x):
     count = 0
     for i in range(len(x)):

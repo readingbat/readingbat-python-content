@@ -1,3 +1,5 @@
+# @desc A **for** loop iterates over each character in a string one at a time.
+
 def for_loop2(x):
     result = 0
     for i in x:

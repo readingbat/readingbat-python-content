@@ -1,3 +1,5 @@
+# @desc When an **if** condition is False, execution skips to the code after the if block.
+
 def if_stmt1(x):
     if x > 10:
         return x

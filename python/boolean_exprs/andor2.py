@@ -1,4 +1,4 @@
-# @desc Truth tables
+# @desc The **or** operator returns True when at least one value is True.
 
 def andor2(val1, val2):
     result = val1 or val2

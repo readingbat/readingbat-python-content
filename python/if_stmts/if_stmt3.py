@@ -1,3 +1,5 @@
+# @desc With **and**, both conditions must be True for the **if** block to execute.
+
 def if_stmt3(x, y):
     if x > 10 and y:
         return x + 10

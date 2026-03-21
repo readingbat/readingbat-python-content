@@ -1,3 +1,5 @@
+# @desc A slice like **str[i:i+n]** extracts a substring of length **n** starting at index **i**.
+
 def for_loop6(str, x):
     result = 0
     xl = len(x)

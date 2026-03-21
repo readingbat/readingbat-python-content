@@ -1,4 +1,4 @@
-# @desc This is a description of **simple_choice2**
+# @desc The **or** operator is True when at least one side is True. Follow which branch runs for each combination.
 
 def simple_choice2(sunny, raining):
     if (sunny or raining):

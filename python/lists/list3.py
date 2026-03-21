@@ -1,3 +1,5 @@
+# @desc A **for** loop over a list visits each element; comparisons with **==** are case-sensitive.
+
 def list3(strs):
     result = 0
     for i in strs:

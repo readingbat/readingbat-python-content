@@ -1,3 +1,5 @@
+# @desc Compare the first and last characters to decide which branch executes. **x[len(x)-1]** is the last character.
+
 def replace4(x):
     if len(x) <= 1:
         return x

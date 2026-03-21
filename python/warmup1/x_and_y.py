@@ -1,4 +1,4 @@
-# @desc This is a description of **x and y**
+# @desc **range(x)** runs the loop **x** times. Think about what value **z** ends up with after the loop finishes.
 
 def x_and_y(x, y):
     z = 0

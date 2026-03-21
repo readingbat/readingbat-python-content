@@ -1,4 +1,4 @@
-# @desc Truth tables
+# @desc The **and** operator returns True only when both values are True.
 
 def andor1(val1, val2):
     result = val1 and val2
