@@ -1,19 +1,19 @@
 [versions]
-kotest = "6.1.10"
+kotest = "6.1.11"
 kotlin = "2.3.20"
 ktor = "3.4.2"
 logging = "8.0.01"
-readingbat = "3.0.11"
-utils = "2.6.3"
+readingbat = "3.1.1"
+utils = "2.7.1"
 versions = "0.53.0"
 
 [libraries]
-readingbat-core = { module = "com.github.readingbat:readingbat-core", version.ref = "readingbat" }
-common-utils-core = { module = "com.github.pambrose.common-utils:core-utils", version.ref = "utils" }
+common-utils-core = { module = "com.pambrose.common-utils:core-utils", version.ref = "utils" }
 kotlin-logging = { group = "io.github.oshai", name = "kotlin-logging-jvm", version.ref = "logging" }
+readingbat-core = { module = "com.readingbat:readingbat-core", version.ref = "readingbat" }
 
-kotest-runner = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
 kotest-assertions = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
+kotest-runner = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
 ktor-server-test = { module = "io.ktor:ktor-server-test-host", version.ref = "ktor" }
 
 [plugins]

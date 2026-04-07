@@ -15,16 +15,16 @@
  *
  */
 
-import com.github.readingbat.kotest.TestSupport.answerAllWith
-import com.github.readingbat.kotest.TestSupport.answerAllWithCorrectAnswer
-import com.github.readingbat.kotest.TestSupport.forEachAnswer
-import com.github.readingbat.kotest.TestSupport.forEachChallenge
-import com.github.readingbat.kotest.TestSupport.forEachGroup
-import com.github.readingbat.kotest.TestSupport.forEachLanguage
-import com.github.readingbat.kotest.TestSupport.initTestProperties
-import com.github.readingbat.kotest.TestSupport.shouldHaveAnswer
-import com.github.readingbat.kotest.TestSupport.testModule
-import com.github.readingbat.posts.AnswerStatus
+import com.readingbat.kotest.TestSupport.answerAllWith
+import com.readingbat.kotest.TestSupport.answerAllWithCorrectAnswer
+import com.readingbat.kotest.TestSupport.forEachAnswer
+import com.readingbat.kotest.TestSupport.forEachChallenge
+import com.readingbat.kotest.TestSupport.forEachGroup
+import com.readingbat.kotest.TestSupport.forEachLanguage
+import com.readingbat.kotest.TestSupport.initTestProperties
+import com.readingbat.kotest.TestSupport.shouldHaveAnswer
+import com.readingbat.kotest.TestSupport.testModule
+import com.readingbat.posts.AnswerStatus
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.string.shouldBeBlank
