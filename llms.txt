@@ -31,7 +31,7 @@ Each .py file has: a `# @desc` comment, a function implementing the challenge, a
 
 ## Development
 
-- Build: `make compile`
+- Build: `make build`
 - Test: `make tests`
 - Run server: `make run`
 - Continuous build: `make cc`
