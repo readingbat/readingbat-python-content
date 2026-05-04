@@ -9,7 +9,7 @@ Python programming challenges served by the [ReadingBat](https://github.com/read
 ## Setup
 
 ```bash
-make compile    # Build without tests
+make build      # Build without tests
 make tests      # Run all tests
 make run        # Start the server on port 8080
 ```

@@ -52,7 +52,7 @@ Tests use Ktor's `testApplication` with ReadingBat's `TestSupport` DSL. The DSL 
 ## Development Commands
 
 ```bash
-make compile          # Build without tests (./gradlew build -x test)
+make build            # Build without tests (./gradlew build -xtest)
 make tests            # Run all tests (./gradlew --rerun-tasks check)
 make run              # Start the server (./gradlew run), port 8080
 make cc               # Continuous compilation, no tests
