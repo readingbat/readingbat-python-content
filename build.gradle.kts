@@ -23,25 +23,25 @@ dependencies {
 }
 
 kotlin {
-  jvmToolchain(17)
+  jvmToolchain(libs.versions.jvm.get().toInt())
 }
+
+val cleanTask = "clean"
+val buildTask = "build"
 
 tasks.register("stage") {
-  dependsOn("clean", "build")
+  dependsOn(cleanTask, buildTask)
 }
 
-tasks.named("build") {
-  mustRunAfter("clean")
+tasks.named(buildTask) {
+  mustRunAfter(cleanTask)
 }
 
 tasks.shadowJar {
   archiveFileName.set("server.jar")
   isZip64 = true
   duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-  exclude("META-INF/*.SF")
-  exclude("META-INF/*.DSA")
-  exclude("META-INF/*.RSA")
-  exclude("LICENSE*")
+  listOf("META-INF/*.SF", "META-INF/*.DSA", "META-INF/*.RSA", "LICENSE*").forEach(::exclude)
 }
 
 tasks.test {
