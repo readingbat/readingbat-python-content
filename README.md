@@ -14,6 +14,15 @@ make tests      # Run all tests
 make run        # Start the server on port 8080
 ```
 
+Run `make help` to see every available target. Other common ones:
+
+```bash
+make lint       # Run kotlinter + detekt
+make format     # Format Kotlin sources
+make cc         # Continuous compilation while you edit
+make uber       # Build and run the fat jar
+```
+
 ## Adding a Challenge
 
 1. Create a Python file in `python/<group_dir>/` following this pattern:
@@ -31,6 +40,6 @@ if __name__ == '__main__':
     main()
 ```
 
-2. Register the challenge in `src/main/kotlin/Content.kt` — either add a `challenge()` call or ensure the filename matches an existing `includeFilesWithType` glob.
+2. Register the challenge in `src/main/kotlin/Content.kt` — either add a `challenge()` call or ensure the filename matches an existing `includeFilesWithType` glob. Return types are qualified, e.g., `ReturnType.IntType`.
 
-3. Run `make tests` to verify.
+3. Run `make lint` then `make tests` to verify.

@@ -34,15 +34,18 @@ detekt {
   parallel = true
 }
 
-val cleanTask = "clean"
-val buildTask = "build"
-
-tasks.register("stage") {
-  dependsOn(cleanTask, buildTask)
+kotlinter {
+  ignoreFormatFailures = false
+  ignoreLintFailures = false
+  reporters = arrayOf("checkstyle", "plain")
 }
 
-tasks.named(buildTask) {
-  mustRunAfter(cleanTask)
+tasks.register("stage") {
+  dependsOn("clean", "build")
+}
+
+tasks.named("build") {
+  mustRunAfter("clean")
 }
 
 tasks.shadowJar {
@@ -56,7 +59,7 @@ tasks.test {
   useJUnitPlatform()
 
   testLogging {
-    events = setOf(TestLogEvent.PASSED, TestLogEvent.SKIPPED, TestLogEvent.FAILED)
+    events = setOf(TestLogEvent.PASSED, TestLogEvent.SKIPPED, TestLogEvent.FAILED, TestLogEvent.STANDARD_ERROR)
     exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
     showStandardStreams = false
   }
