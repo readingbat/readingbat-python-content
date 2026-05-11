@@ -19,10 +19,10 @@ ReadingBat Python content repository — Python programming challenges served vi
 ### Content DSL (Content.kt)
 
 Challenges are registered two ways:
-1. **Individually**: `challenge("name") { returnType = BooleanType }` — explicit per-file
-2. **Bulk via glob**: `includeFilesWithType = "pattern*.py" returns Type` — auto-includes matching files
+1. **Individually**: `challenge("name") { returnType = ReturnType.BooleanType }` — explicit per-file
+2. **Bulk via glob**: `includeFilesWithType = "pattern*.py" returns ReturnType.Type` — auto-includes matching files
 
-Return types: `BooleanType`, `StringType`, `IntType`, `BooleanListType`, `IntListType`, `StringListType`
+Return types (referenced via the `ReturnType` enum): `BooleanType`, `StringType`, `IntType`, `BooleanListType`, `IntListType`, `StringListType`. `Content.kt` imports `ReturnType` directly rather than wildcard-importing its members, so always qualify (e.g., `ReturnType.IntType`) when adding entries.
 
 **Source switching**: Production reads from GitHub (`GitHubRepo`); development reads from local filesystem (`FileSystemSource`), controlled by `isProduction()`.
 
@@ -51,22 +51,28 @@ Tests use Ktor's `testApplication` with ReadingBat's `TestSupport` DSL. The DSL 
 
 ## Development Commands
 
+Run `make help` for a self-documenting list. Common targets:
+
 ```bash
-make build            # Build without tests (./gradlew build -xtest)
+make build            # Build without tests (./gradlew build -x test)
 make tests            # Run all tests (./gradlew --rerun-tasks check)
 make run              # Start the server (./gradlew run), port 8080
 make cc               # Continuous compilation, no tests
+make lint             # Run kotlinter (lintKotlin) + detekt
+make format           # Format Kotlin sources via formatKotlin
+make detekt           # Run detekt static analysis only
+make detekt-baseline  # Regenerate the detekt baseline file
 make versioncheck     # Check dependency updates
 make upgrade-wrapper  # Upgrade Gradle wrapper
 make uberjar          # Build fat jar
 make uber             # Build and run fat jar (java -jar build/libs/server.jar)
 ```
 
-JVM toolchain: Java 17. Testing: Kotest with JUnit5 platform.
+JVM toolchain: Java 17. Testing: Kotest with JUnit5 platform. Lint/format: kotlinter + detekt, configured via `.editorconfig` (ktlint rule overrides) and the `detekt { ... }` block in `build.gradle.kts`.
 
 ## Adding a New Challenge
 
 1. Create `python/<group_dir>/challenge_name.py` following the file pattern above
-2. Register in `Content.kt` — either add a `challenge()` call or ensure filename matches an existing `includeFilesWithType` glob
+2. Register in `Content.kt` — either add a `challenge()` call or ensure filename matches an existing `includeFilesWithType` glob (qualify return types as `ReturnType.IntType`, etc.)
 3. The return type in `Content.kt` must match what the Python function actually returns
-4. Run `make tests` to verify the challenge works end-to-end
+4. Run `make lint` to catch style issues, then `make tests` to verify the challenge works end-to-end

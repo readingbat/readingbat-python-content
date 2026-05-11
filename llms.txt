@@ -18,10 +18,10 @@ Two-language system: Kotlin defines and serves challenges; Python files are the 
 ## Content DSL
 
 Challenges are registered in Content.kt two ways:
-- Individually: `challenge("name") { returnType = BooleanType }`
-- Bulk via glob: `includeFilesWithType = "pattern*.py" returns Type`
+- Individually: `challenge("name") { returnType = ReturnType.BooleanType }`
+- Bulk via glob: `includeFilesWithType = "pattern*.py" returns ReturnType.Type`
 
-Return types: BooleanType, StringType, IntType, BooleanListType, IntListType, StringListType
+Return types (via the `ReturnType` enum, always qualified): BooleanType, StringType, IntType, BooleanListType, IntListType, StringListType
 
 Production reads from GitHub; development reads from local filesystem.
 
@@ -31,15 +31,19 @@ Each .py file has: a `# @desc` comment, a function implementing the challenge, a
 
 ## Development
 
+- List all targets: `make help`
 - Build: `make build`
 - Test: `make tests`
 - Run server: `make run`
 - Continuous build: `make cc`
+- Lint (kotlinter + detekt): `make lint`
+- Format Kotlin sources: `make format`
 - JVM toolchain: Java 17
 - Testing: Kotest with JUnit5
+- Lint/format: kotlinter + detekt, configured via `.editorconfig` and `build.gradle.kts`
 
 ## Adding Challenges
 
 1. Create `python/<group_dir>/challenge_name.py` with function and main() test cases
-2. Register in Content.kt with correct return type
-3. Run `make tests` to verify
+2. Register in Content.kt with correct return type (qualified, e.g. `ReturnType.IntType`)
+3. Run `make lint` then `make tests` to verify
