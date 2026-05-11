@@ -1,38 +1,57 @@
-.PHONY: default clean build tests uberjar uber cc run heroku logs versioncheck upgrade-wrapper
+.PHONY: default help clean build lint format detekt detekt-baseline tests uberjar uber \
+		cc run heroku logs versioncheck upgrade-wrapper _require-gradle-version
 
 GRADLE_VERSION := $(shell awk -F'"' '/^gradle[[:space:]]*=/ {print $$2}' gradle/libs.versions.toml)
 
 default: versioncheck
 
-clean:
+help: ## Show this help
+	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "  \033[36m%-22s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
+
+clean: ## Remove build artifacts
 	./gradlew clean
 
-build:
-	./gradlew build -xtest
+build: ## Build the project (skips tests)
+	./gradlew build -x test
 
-tests:
+lint: ## Run Kotlinter and detekt
+	./gradlew lintKotlin detekt
+
+format: ## Format Kotlin sources with kotlinter
+	./gradlew formatKotlin
+
+detekt: ## Run detekt static analysis
+	./gradlew detekt
+
+detekt-baseline: ## Generate detekt baseline file
+	./gradlew detektBaseline
+
+tests: ## Run all tests
 	./gradlew --rerun-tasks check
 
-uberjar:
+uberjar: ## Build the fat jar
 	./gradlew uberjar
 
-uber: uberjar
+uber: uberjar ## Build and run the fat jar
 	java -jar build/libs/server.jar
 
-cc:
-	./gradlew build --continuous -xtest
+cc: ## Continuous compilation (no tests)
+	./gradlew build --continuous -x test
 
-run:
+run: ## Start the server on port 8080
 	./gradlew run
 
-heroku:
+heroku: ## Push master to Heroku
 	git push heroku master
 
-logs:
+logs: ## Tail Heroku logs
 	heroku logs --tail
 
-versioncheck:
+versioncheck: ## Check for dependency updates (default target)
 	./gradlew dependencyUpdates
 
-upgrade-wrapper:
+upgrade-wrapper: _require-gradle-version ## Upgrade Gradle wrapper to version in libs.versions.toml
 	./gradlew wrapper --gradle-version=$(GRADLE_VERSION) --distribution-type=bin
+
+_require-gradle-version:
+	@[ -n "$(GRADLE_VERSION)" ] || { echo "ERROR: Could not determine gradle version from gradle/libs.versions.toml" >&2; exit 1; }
