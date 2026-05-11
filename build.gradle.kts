@@ -5,6 +5,8 @@ plugins {
   alias(libs.plugins.kotlin.jvm)
   alias(libs.plugins.versions)
   alias(libs.plugins.ktor.plugin)
+  alias(libs.plugins.detekt)
+  alias(libs.plugins.kotlinter)
 }
 
 // This is for ./gradlew run
@@ -24,6 +26,12 @@ dependencies {
 
 kotlin {
   jvmToolchain(libs.versions.jvm.get().toInt())
+}
+
+detekt {
+  source.setFrom("src/main/kotlin", "src/test/kotlin")
+  buildUponDefaultConfig = true
+  parallel = true
 }
 
 val cleanTask = "clean"
