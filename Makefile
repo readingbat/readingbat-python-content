@@ -1,12 +1,13 @@
 .PHONY: default help clean build lint format detekt detekt-baseline tests uberjar uber \
-		cc run heroku logs versioncheck upgrade-wrapper _require-gradle-version
+		cc run heroku logs versions upgrade-wrapper _require-gradle-version
 
-GRADLE_VERSION := $(shell awk -F'"' '/^gradle[[:space:]]*=/ {print $$2}' gradle/libs.versions.toml)
+GRADLE_VERSION := $(shell sed -n 's/^gradle-wrapper = "\(.*\)"/\1/p' gradle/libs.versions.toml)
 
-default: versioncheck
+default: help
 
-help: ## Show this help
-	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "  \033[36m%-22s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
+help:  ## Show this help (list of targets)
+	@awk 'BEGIN {FS = ":.*?## "; printf "Usage: make <target>\n\nTargets:\n"} \
+		/^[a-zA-Z0-9_-]+:.*?## / {printf "  \033[36m%-22s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
 clean: ## Remove build artifacts
 	./gradlew clean
@@ -50,8 +51,8 @@ logs: ## Tail Heroku logs
 # Gradle's documented upgrade procedure: the first run rewrites
 # gradle-wrapper.properties using the *old* wrapper jar; the second run
 # regenerates the wrapper itself with the new version.
-versioncheck: ## Check for dependency updates (default target)
-	./gradlew dependencyUpdates
+versions: ## Check for dependency updates (default target)
+	./gradlew dependencyUpdates --no-configuration-cache --no-parallel
 
 upgrade-wrapper: _require-gradle-version ## Upgrade Gradle wrapper to version in libs.versions.toml
 	./gradlew wrapper --gradle-version=$(GRADLE_VERSION) --distribution-type=bin
