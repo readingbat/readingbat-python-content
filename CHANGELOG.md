@@ -30,6 +30,9 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Removed
 - Makefile `heroku` and `logs` targets.
 
+### Fixed
+- `ContentTests` now calls `correctAnswers()` as a function, matching the upgraded `readingbat-kotest` API (previously a property).
+
 ## [Pre-Unreleased history]
 
 Prior changes were tracked only via Git history; see `git log` for details.

@@ -72,7 +72,7 @@ class ContentTests : StringSpec() {
           forEachGroup {
             forEachChallenge {
               forEachAnswer {
-                it shouldHaveAnswer correctAnswers[it.index]
+                it shouldHaveAnswer correctAnswers()[it.index]
               }
             }
           }
