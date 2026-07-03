@@ -38,7 +38,7 @@ Each .py file has: a `# @desc` comment, a function implementing the challenge, a
 - Continuous build: `make cc`
 - Lint (kotlinter + detekt): `make lint`
 - Format Kotlin sources: `make format`
-- JVM toolchain: Java 17
+- JVM toolchain: Java 25
 - Testing: Kotest with JUnit5
 - Lint/format: kotlinter + detekt, configured via `.editorconfig` and `build.gradle.kts`
 

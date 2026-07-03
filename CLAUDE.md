@@ -62,13 +62,17 @@ make lint             # Run kotlinter (lintKotlin) + detekt
 make format           # Format Kotlin sources via formatKotlin
 make detekt           # Run detekt static analysis only
 make detekt-baseline  # Regenerate the detekt baseline file
-make versioncheck     # Check dependency updates
+make versions         # Check for dependency updates
 make upgrade-wrapper  # Upgrade Gradle wrapper
 make uberjar          # Build fat jar
 make uber             # Build and run fat jar (java -jar build/libs/server.jar)
 ```
 
-JVM toolchain: Java 17. Testing: Kotest with JUnit5 platform. Lint/format: kotlinter + detekt, configured via `.editorconfig` (ktlint rule overrides) and the `detekt { ... }` block in `build.gradle.kts`.
+JVM toolchain: Java 25 (set via `jvm` in `gradle/libs.versions.toml`, consumed by `jvmToolchain(...)` in `build.gradle.kts`). Testing: Kotest with JUnit5 platform. Lint/format: kotlinter + detekt, configured via `.editorconfig` (ktlint rule overrides) and the `detekt { ... }` block in `build.gradle.kts`.
+
+## Continuous Integration
+
+`.github/workflows/ci.yml` runs `make lint` and `make tests` as parallel jobs on every push and pull request to `master`, with Gradle caching, concurrency cancellation, and uploaded lint/test reports.
 
 ## Adding a New Challenge
 
