@@ -4,7 +4,7 @@ Python programming challenges served by the [ReadingBat](https://github.com/read
 
 ## Prerequisites
 
-- Java 17+
+- Java 25+ (the Gradle toolchain targets Java 25; Gradle can auto-provision it)
 
 ## Setup
 
