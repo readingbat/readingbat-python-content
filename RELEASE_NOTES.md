@@ -76,5 +76,5 @@ public DSL has changed.
 ### Full diff
 
 See the [compare view on
-GitHub](https://github.com/readingbat/readingbat-python-content/compare/179e26e...1.0.1)
+GitHub](https://github.com/readingbat/readingbat-python-content/compare/1.0.0...1.0.1)
 for the complete set of changes in this release.

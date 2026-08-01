@@ -10,9 +10,8 @@ Nothing yet.
 
 ## [1.0.1] - 2026-08-01
 
-First tagged release. This entry covers all work since the project began
-tracking changes here; no runtime behavior, challenge content, or public DSL
-has changed.
+Tooling, CI, and toolchain upgrades. No runtime behavior, challenge content,
+or public DSL has changed.
 
 ### Added
 - Kotlinter Gradle plugin (`org.jmailen.kotlinter`) wired into the build for Kotlin lint and formatting.
@@ -47,17 +46,35 @@ has changed.
 ### Upgrade notes
 - `common-utils` crossed a major version (2.9.3 → 3.2.2) during this cycle. The build and full test suite pass against it, but treat it as the highest-risk item if you pin transitively.
 
-## [Pre-1.0.1 history]
+## [1.0.0] - 2026-05-08
 
-Prior changes were tracked only via Git history; see `git log` for details.
-Notable recent work includes:
+Tagged retroactively on 2026-08-01. The repository carried `version=1.0.0`
+from PR #11 onward but was never tagged at the time, and no changelog was kept
+during this period — the entries below are reconstructed from Git history and
+are less complete than later ones. Structured changelog tracking begins with
+1.0.1.
 
-- Consolidated string literals and centralized versions (#12).
+### Added
+- 80 new challenges across 8 new topic groups, bringing the repository to 14 topic groups under `python/`: `warmup1`, `math_ops`, `boolean_exprs`, `type_conv`, `if_stmts`, `string_ops`, `string_methods`, `for_loops`, `while_loops`, `lists`, `nested_loops`, `tuples`, `dictionaries`, `list_comps`.
+- Student hints across all Python challenge files, with a consistent `@desc` format.
+- `readingbat-kotest` test dependency.
+
+### Changed
+- Migrated dependency resolution from JitPack to Maven Central.
+- Consolidated string literals and centralized versions in `gradle/libs.versions.toml` (#12).
 - Fixed the Gradle 9.5 build, refreshed dependencies, and aligned make targets (#11).
-- Bumped the Gradle wrapper to 9.5.0.
-- Bumped Kotlin to 2.3.21, Ktor to 3.4.3, ReadingBat to 3.1.4, Utils to 2.8.1; added `readingbat-kotest` test dependency.
-- Added 80 new challenges across 8 new topic groups.
-- Improved student hints across all Python challenge files.
+- Bumped the Gradle wrapper to 9.5.0; JVM toolchain on Java 17.
+- Dependency versions as of this tag: Kotlin 2.3.21, Ktor 3.4.3, Kotest 6.1.11, `readingbat-core` 3.1.5, `common-utils` 2.8.2, `kotlin-logging` 8.0.02.
+- Rewrote tests in Kotest's `StringSpec()` `init` style.
+- Reordered challenge groups by difficulty — warmups first, list comprehensions last.
+
+### Removed
+- `list_comp10` challenge.
+
+### Fixed
+- `andor7` function name mismatch, and the unregistered `front_back` challenge.
+- Several incorrect challenge return types.
 
 [Unreleased]: https://github.com/readingbat/readingbat-python-content/compare/1.0.1...master
-[1.0.1]: https://github.com/readingbat/readingbat-python-content/commits/1.0.1
+[1.0.1]: https://github.com/readingbat/readingbat-python-content/compare/1.0.0...1.0.1
+[1.0.0]: https://github.com/readingbat/readingbat-python-content/commits/1.0.0
