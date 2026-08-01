@@ -6,8 +6,16 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+Nothing yet.
+
+## [1.0.1] - 2026-08-01
+
+First tagged release. This entry covers all work since the project began
+tracking changes here; no runtime behavior, challenge content, or public DSL
+has changed.
+
 ### Added
-- Kotlinter Gradle plugin (`org.jmailen.kotlinter` 5.5.0) wired into the build for Kotlin lint and formatting.
+- Kotlinter Gradle plugin (`org.jmailen.kotlinter`) wired into the build for Kotlin lint and formatting.
 - Detekt Gradle plugin (`dev.detekt` 2.0.0-alpha.5) with a `detekt { ... }` configuration block.
 - `.editorconfig` pinning charset, end-of-line, indent style, and ktlint rule overrides so kotlinter aligns with the project's existing Kotlin style.
 - GitHub Actions CI (`.github/workflows/ci.yml`) running `make lint` and `make tests` as parallel jobs on every push and pull request to `master`, with Gradle caching, concurrency cancellation, and uploaded lint/test reports.
@@ -17,7 +25,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Changed
 - Raised the JVM toolchain from Java 17 to Java 25 (`jvm` in `gradle/libs.versions.toml`).
 - Upgraded the Gradle wrapper from 9.5.0 to 9.6.1.
-- Bumped dependencies: Kotlin → 2.4.0, Ktor → 3.5.1, Kotest → 6.2.1, `readingbat-core` → 3.2.1, `common-utils` → 2.9.3, `kotlin-logging` → 8.0.4, kotlinter → 5.5.0, detekt → 2.0.0-alpha.5.
+- Bumped dependencies to their current versions: Kotlin → 2.4.10, Ktor → 3.5.1, Kotest → 6.2.3, `readingbat-core` → 3.3.1, `common-utils` → 3.2.2, `kotlin-logging` → 8.0.4, kotlinter → 5.6.0, detekt → 2.0.0-alpha.5, versions plugin → 0.57.0.
+- Moved the dependency-updates plugin from the retired `com.github.ben-manes.versions` id to `io.github.ben-manes.versions`.
 - Refactored `build.gradle.kts` into per-concern helper functions (`configureKotlin`, `configureDetekt`, `configureKotlinter`, `configureKtor`, `configureShadowJar`, `configureTest`, `configureVersions`).
 - Enabled the Kotlin unused-return-value checker (`-Xreturn-value-checker=check`) on production code only (the test source set is excluded to avoid false positives from Kotest's fluent assertions).
 - Build the fat jar via Ktor's `fatJar` task; the `dependencyUpdates` check now rejects pre-release candidates for dependencies currently on a stable version.
@@ -26,6 +35,8 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `Content.kt` now imports `ReturnType` directly instead of `ReturnType.*`; all challenge registrations qualify return types (e.g., `ReturnType.IntType`).
 - Makefile `build` and `cc` targets use the canonical `-x test` flag instead of `-xtest`.
 - Reordered `.PHONY` to match the in-file target definition order.
+- Trimmed `CLAUDE.md` to the guidance the codebase cannot teach on its own, removing the source-file layout, the Python file-pattern code block, the Test Structure paragraph, the `make` target table, the toolchain/lint stack line, and the CI section — all of which are derivable from the repository itself.
+- Corrected the topic-group list in `llms.txt`, which named 6 of the 14 groups under `python/`.
 
 ### Removed
 - Makefile `heroku` and `logs` targets.
@@ -33,7 +44,10 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Fixed
 - `ContentTests` now calls `correctAnswers()` as a function, matching the upgraded `readingbat-kotest` API (previously a property).
 
-## [Pre-Unreleased history]
+### Upgrade notes
+- `common-utils` crossed a major version (2.9.3 → 3.2.2) during this cycle. The build and full test suite pass against it, but treat it as the highest-risk item if you pin transitively.
+
+## [Pre-1.0.1 history]
 
 Prior changes were tracked only via Git history; see `git log` for details.
 Notable recent work includes:
@@ -45,4 +59,5 @@ Notable recent work includes:
 - Added 80 new challenges across 8 new topic groups.
 - Improved student hints across all Python challenge files.
 
-[Unreleased]: https://github.com/readingbat/readingbat-python-content/commits/master
+[Unreleased]: https://github.com/readingbat/readingbat-python-content/compare/1.0.1...master
+[1.0.1]: https://github.com/readingbat/readingbat-python-content/commits/1.0.1
