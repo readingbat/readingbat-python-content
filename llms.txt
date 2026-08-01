@@ -12,7 +12,7 @@ Two-language system: Kotlin defines and serves challenges; Python files are the 
 
 - `src/main/kotlin/Content.kt`: DSL configuration mapping Python files to challenge groups and return types
 - `src/main/kotlin/ContentServer.kt`: Entry point, starts ReadingBatServer
-- `python/`: Challenge files organized by topic (boolean_exprs, string_ops, if_stmts, for_loops, lists, warmup1)
+- `python/`: Challenge files organized by topic (warmup1, math_ops, boolean_exprs, type_conv, if_stmts, string_ops, string_methods, for_loops, while_loops, lists, nested_loops, tuples, dictionaries, list_comps)
 - `src/test/kotlin/ContentTests.kt`: Validates all challenges accept correct answers and reject wrong ones
 
 ## Content DSL
