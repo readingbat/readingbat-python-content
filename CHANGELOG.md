@@ -8,6 +8,25 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 Nothing yet.
 
+## [1.1.0] - 2026-09-21
+
+Dependency and toolchain refresh, plus line-ending normalization. No runtime
+behavior, challenge content, or public DSL has changed.
+
+### Added
+- `.gitattributes` normalizing line endings on commit: `text=auto` by default, LF enforced for `gradlew`, `*.sh`, and `*.py`, CRLF for `*.bat`, and `*.jar` marked binary.
+
+### Changed
+- Upgraded the Gradle wrapper from 9.6.1 to 9.7.1.
+- Bumped dependencies: Ktor → 3.6.0, Kotest → 6.2.5, `readingbat-core` → 3.4.0.
+- Bumped build plugins: kotlinter → 5.7.0, detekt → 2.0.0-alpha.6, versions plugin → 0.64.0.
+- `gradlew.bat` was renormalized to CRLF and the Gradle wrapper jar refreshed as part of the wrapper upgrade.
+
+### Documentation
+- Reconstructed a `[1.0.0]` section in this changelog from Git history, replacing the former catch-all "Pre-1.0.1 history" heading, and added Keep a Changelog compare links for every release.
+- Documented the `.gitattributes` line-ending policy in `README.md`, `CLAUDE.md`, and `llms.txt`.
+- Added the CI workflow to the `llms.txt` development section.
+
 ## [1.0.1] - 2026-08-01
 
 Tooling, CI, and toolchain upgrades. No runtime behavior, challenge content,
@@ -75,6 +94,7 @@ are less complete than later ones. Structured changelog tracking begins with
 - `andor7` function name mismatch, and the unregistered `front_back` challenge.
 - Several incorrect challenge return types.
 
-[Unreleased]: https://github.com/readingbat/readingbat-python-content/compare/1.0.1...master
+[Unreleased]: https://github.com/readingbat/readingbat-python-content/compare/1.1.0...master
+[1.1.0]: https://github.com/readingbat/readingbat-python-content/compare/1.0.1...1.1.0
 [1.0.1]: https://github.com/readingbat/readingbat-python-content/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/readingbat/readingbat-python-content/commits/1.0.0

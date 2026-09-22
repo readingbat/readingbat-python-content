@@ -41,6 +41,8 @@ Each .py file has: a `# @desc` comment, a function implementing the challenge, a
 - JVM toolchain: Java 25
 - Testing: Kotest with JUnit5
 - Lint/format: kotlinter + detekt, configured via `.editorconfig` and `build.gradle.kts`
+- Line endings: normalized by `.gitattributes` (LF for `*.py`, `*.sh`, `gradlew`; CRLF for `*.bat`)
+- CI: `.github/workflows/ci.yml` runs `make lint` and `make tests` on every push and PR to `master`
 
 ## Adding Challenges
 

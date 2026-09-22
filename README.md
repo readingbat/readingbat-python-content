@@ -43,3 +43,9 @@ if __name__ == '__main__':
 2. Register the challenge in `src/main/kotlin/Content.kt` — either add a `challenge()` call or ensure the filename matches an existing `includeFilesWithType` glob. Return types are qualified, e.g., `ReturnType.IntType`.
 
 3. Run `make lint` then `make tests` to verify.
+
+## Line Endings
+
+`.gitattributes` normalizes line endings on commit: LF for `*.py`, `*.sh`, and
+`gradlew`; CRLF for `*.bat`; `*.jar` is treated as binary. If files show as
+modified right after a fresh clone or pull, run `git add --renormalize .` once.
