@@ -1,5 +1,48 @@
 # Release Notes
 
+## 1.1.0 — dependency refresh and line-ending normalization
+
+A maintenance release: current versions of the build toolchain and runtime
+dependencies, plus a `.gitattributes` file that normalizes line endings across
+platforms. No runtime behavior, challenge content, or public DSL has changed.
+
+### Highlights
+
+- **Gradle wrapper → 9.7.1.** Up from 9.6.1.
+- **Dependency upgrades.** Ktor → 3.6.0, Kotest → 6.2.5, `readingbat-core` →
+  3.4.0. Kotlin (2.4.10), `common-utils` (3.2.2), and `kotlin-logging` (8.0.4)
+  are unchanged from 1.0.1.
+- **Build plugin upgrades.** kotlinter → 5.7.0, detekt → 2.0.0-alpha.6,
+  versions plugin → 0.64.0.
+- **`.gitattributes`.** Line endings are now normalized on commit: `text=auto`
+  by default, LF enforced for `gradlew`, `*.sh`, and `*.py`, CRLF for `*.bat`,
+  and `*.jar` treated as binary. This keeps the Python challenge files and the
+  Gradle wrapper scripts stable regardless of the contributor's platform.
+
+### Documentation
+
+- The changelog now carries a reconstructed `[1.0.0]` section (built from Git
+  history after the tag was created retroactively), replacing the former
+  catch-all "Pre-1.0.1 history" heading, plus compare links for every release.
+- `README.md`, `CLAUDE.md`, and `llms.txt` document the new line-ending policy.
+- `llms.txt` now mentions the GitHub Actions CI workflow alongside the other
+  development commands.
+
+### Upgrade notes
+
+- Contributors on Windows may see `gradlew.bat` show as modified the first time
+  they pull, as Git renormalizes it to CRLF under the new `.gitattributes`.
+  Running `git add --renormalize .` once resolves it.
+- Run `./gradlew --refresh-dependencies` (or `make build`) once after pulling so
+  the new plugin and dependency versions resolve.
+- The Java 25 toolchain requirement from 1.0.1 is unchanged.
+
+### Full diff
+
+See the [compare view on
+GitHub](https://github.com/readingbat/readingbat-python-content/compare/1.0.1...1.1.0)
+for the complete set of changes in this release.
+
 ## 1.0.1 — tooling, CI, and dependency upgrades
 
 This release focuses on developer ergonomics, continuous integration, and

@@ -26,6 +26,10 @@ The `main()` prints define the test cases — each `print()` call produces an ex
 
 Run `make help` for a self-documenting list of the build, test, lint, run, and packaging targets.
 
+## Line Endings
+
+`.gitattributes` normalizes line endings on commit: LF for `*.py`, `*.sh`, and `gradlew`; CRLF for `*.bat`. Write new challenge files with LF and let Git handle the rest — do not hand-convert.
+
 ## Adding a New Challenge
 
 1. Create `python/<group_dir>/challenge_name.py` following the file pattern above
