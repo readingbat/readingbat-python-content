@@ -1,5 +1,5 @@
 .PHONY: default help clean build lint format detekt detekt-baseline tests uberjar uber \
-		cc run versions upgrade-wrapper _require-gradle-version
+		cc run versions versions-all upgrade-wrapper _require-gradle-version
 
 GRADLE_VERSION := $(shell sed -n 's/^gradle-wrapper = "\(.*\)"/\1/p' gradle/libs.versions.toml)
 
@@ -42,8 +42,15 @@ cc: ## Continuous compilation (no tests)
 run: ## Start the server on port 8080
 	./gradlew run
 
-versions: ## Check for dependency updates (default target)
+# dependencyUpdates is marked incompatible with the configuration cache (build.gradle.kts), so a run with the cache on
+# builds an entry only to discard it, and says so. --no-configuration-cache skips the cache for this run instead.
+# build.gradle.kts gives the task a formatter that lists only what is behind; versions-all names the plugin's own plain
+# report, which also lists everything up to date.
+versions: ## List the dependencies with newer versions, and any that could not be checked
 	./gradlew dependencyUpdates --no-configuration-cache --no-parallel
+
+versions-all: ## The plugin's full dependency report, up-to-date dependencies included
+	./gradlew dependencyUpdates --no-configuration-cache --no-parallel --output-formatter=plain
 
 upgrade-wrapper: _require-gradle-version ## Upgrade the Gradle wrapper to the catalog version
 	# Gradle's documented upgrade procedure: the first run rewrites

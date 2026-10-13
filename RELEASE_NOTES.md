@@ -1,5 +1,55 @@
 # Release Notes
 
+## 1.2.0 — dependency refresh and a quieter update report
+
+A maintenance release: current versions of the build toolchain and runtime
+dependencies, a dependency-update report that lists only what is behind, and
+the Gradle configuration cache turned on. No runtime behavior, challenge
+content, or public DSL has changed.
+
+### Highlights
+
+- **`make versions` lists only what is behind.** A custom `outputFormatter` in
+  `build.gradle.kts` prints one line per dependency with a newer version, a `?`
+  line for any that could not be checked, and a line for a newer Gradle. When
+  nothing is behind it prints `All dependencies are up to date`.
+- **`make versions-all`.** The plugin's full plain report, which also lists
+  every dependency that is already up to date.
+- **Gradle configuration cache on.** `gradle.properties` now sets
+  `org.gradle.configuration-cache=true`, and adds `org.gradle.jvmargs` with a
+  4 GB heap for the Gradle and Kotlin daemons, a heap dump on out-of-memory,
+  and UTF-8 file encoding.
+- **Gradle wrapper → 9.8.1.** Up from 9.7.1.
+- **Dependency upgrades.** Kotlin → 2.4.21, `readingbat-core` → 3.5.0,
+  `common-utils` → 5.1.1. Ktor (3.6.0), Kotest (6.2.5), and `kotlin-logging`
+  (8.0.4) are unchanged from 1.1.0.
+- **Build plugin upgrades.** versions plugin → 0.66.0. kotlinter (5.7.0) and
+  detekt (2.0.0-alpha.6) are unchanged.
+
+### Documentation
+
+- `README.md` and `llms.txt` list `make versions` and `make versions-all`.
+
+### Upgrade notes
+
+- `common-utils` crossed two major versions (3.2.2 → 5.1.1). The project uses
+  only `GitHubRepo`, `FileSystemSource`, and `OwnerType` from it, and the build
+  and full test suite pass against the new version.
+- The daemons now ask for a 4 GB heap. On a machine with little memory, lower
+  `-Xmx4g` in `gradle.properties`.
+- `dependencyUpdates` is not compatible with the configuration cache, and the
+  task says so. Run it through `make versions` or `make versions-all`, which
+  pass `--no-configuration-cache`.
+- Run `./gradlew --refresh-dependencies` (or `make build`) once after pulling so
+  the new plugin and dependency versions resolve.
+- The Java 25 toolchain requirement is unchanged.
+
+### Full diff
+
+See the [compare view on
+GitHub](https://github.com/readingbat/readingbat-python-content/compare/1.1.0...1.2.0)
+for the complete set of changes in this release.
+
 ## 1.1.0 — dependency refresh and line-ending normalization
 
 A maintenance release: current versions of the build toolchain and runtime
