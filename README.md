@@ -21,6 +21,7 @@ make lint       # Run kotlinter + detekt
 make format     # Format Kotlin sources
 make cc         # Continuous compilation while you edit
 make uber       # Build and run the fat jar
+make versions   # List dependencies with newer versions (versions-all: full report)
 ```
 
 ## Adding a Challenge

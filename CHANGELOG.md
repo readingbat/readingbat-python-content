@@ -8,6 +8,30 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 Nothing yet.
 
+## [1.2.0] - 2026-10-13
+
+Dependency and toolchain refresh, a quieter dependency-update report, and the
+Gradle configuration cache turned on. No runtime behavior, challenge content,
+or public DSL has changed.
+
+### Added
+- Makefile `versions-all` target: the dependency-updates plugin's full plain report, up-to-date dependencies included.
+- `org.gradle.jvmargs` in `gradle.properties`: a 4 GB heap for the Gradle and Kotlin daemons, a heap dump on out-of-memory, and UTF-8 file encoding.
+
+### Changed
+- `make versions` now prints only the dependencies with newer versions, those that could not be checked, and any Gradle update, via a custom `outputFormatter` in `build.gradle.kts`. Its help text no longer calls it the default target (`help` is).
+- Turned on the Gradle configuration cache (`org.gradle.configuration-cache=true`). `dependencyUpdates` stays marked incompatible, and `make versions` / `make versions-all` skip the cache for that one task.
+- Upgraded the Gradle wrapper from 9.7.1 to 9.8.1.
+- Bumped dependencies: Kotlin → 2.4.21, `readingbat-core` → 3.5.0, `common-utils` → 5.1.1.
+- Bumped build plugins: versions plugin → 0.66.0.
+- The Gradle wrapper jar and `gradlew.bat` were regenerated as part of the wrapper upgrade.
+
+### Documentation
+- Listed `make versions` and `make versions-all` in `README.md` and `llms.txt`.
+
+### Upgrade notes
+- `common-utils` crossed two major versions (3.2.2 → 5.1.1) during this cycle. The project uses only `GitHubRepo`, `FileSystemSource`, and `OwnerType` from it; the build and full test suite pass against the new version, but treat it as the highest-risk item if you pin transitively.
+
 ## [1.1.0] - 2026-09-21
 
 Dependency and toolchain refresh, plus line-ending normalization. No runtime
@@ -94,7 +118,8 @@ are less complete than later ones. Structured changelog tracking begins with
 - `andor7` function name mismatch, and the unregistered `front_back` challenge.
 - Several incorrect challenge return types.
 
-[Unreleased]: https://github.com/readingbat/readingbat-python-content/compare/1.1.0...master
+[Unreleased]: https://github.com/readingbat/readingbat-python-content/compare/1.2.0...master
+[1.2.0]: https://github.com/readingbat/readingbat-python-content/compare/1.1.0...1.2.0
 [1.1.0]: https://github.com/readingbat/readingbat-python-content/compare/1.0.1...1.1.0
 [1.0.1]: https://github.com/readingbat/readingbat-python-content/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/readingbat/readingbat-python-content/commits/1.0.0
